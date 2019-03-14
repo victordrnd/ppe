@@ -7,7 +7,7 @@ class Utilisateur
   }
   public function connexion($mail, $password){
     $password = hash('sha512', $password);
-    $user = $this->bdd->select('tclient', '*', 'CLIMail='.tostring($mail));
+    $user = $this->bdd->select('client', '*', 'CLIMail='.tostring($mail));
     if(isset($user[0])){
       $user = $user[0];
     }
@@ -35,14 +35,14 @@ class Utilisateur
       $mail = htmlspecialchars($mail);
       $nom = htmlspecialchars($nom);
       $prenom = htmlspecialchars($prenom);
-      $usertest = $this->bdd->select('tclient', 'CLIMail', 'CLIMail='.tostring($mail));
+      $usertest = $this->bdd->select('client', 'CLIMail', 'CLIMail='.tostring($mail));
       if(isset($usertest[0])){
         $usertest = $usertest[0];
       }
       if(empty($usertest['CLIMail'])){
         $value = array(tostring($id), tostring($mail), tostring($password1), $date, tostring($nom), tostring($prenom));
         $row = "CLIId, CliMail, CLIPassword, CLIDateInscription, CLINom, CLIPrenom";
-        $req = $this->bdd->insert('TClient', $value, $row);
+        $req = $this->bdd->insert('client', $value, $row);
         $nometprenom = $nom.' '.$prenom;
         $mailclass = new Mail;
         $mailclass->inscription($id,$mail,$nometprenom);
@@ -60,20 +60,20 @@ class Utilisateur
     }
   }
   public function details($clientid){
-    return $this->bdd->select('tclient', '*', 'CLIId='.tostring($clientid));
+    return $this->bdd->select('client', '*', 'CLIId='.tostring($clientid));
   }
   //modificateur
   public function setDateNaissance($clientid, $date){
-    $this->bdd->update('tclient', array('CLIDateNaissance' => $date), 'CLIId='.tostring($clientid));
+    $this->bdd->update('client', array('CLIDateNaissance' => $date), 'CLIId='.tostring($clientid));
   }
   public function setZip($clientid, $zip){
-    $this->bdd->update('tclient', array('CLIZip' => $zip), 'CLIId='.tostring($clientid));
+    $this->bdd->update('client', array('CLIZip' => $zip), 'CLIId='.tostring($clientid));
   }
   public function setAdresse($clientid, $adresse){
-    $this->bdd->update('tclient', array('CLIAdresse' => $adresse), 'CLIId='.tostring($clientid));
+    $this->bdd->update('client', array('CLIAdresse' => $adresse), 'CLIId='.tostring($clientid));
   }
   public function verify($clientid){
-    $this->bdd->update('tclient', array('CLIVerif' => 1), 'CLIId='.tostring($clientid));
+    $this->bdd->update('client', array('CLIVerif' => 1), 'CLIId='.tostring($clientid));
   }
 }
 ?>
