@@ -49,13 +49,13 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
 <header>
   <ul class="nav shadow-sm p-3 mb-5 " style="min-height:70px;">
     <li class="nav-item d-none d-md-block">
-      <a class="nav-link active" href="#"><img src="<?=ROOTDIR?>assets/logo.svg" width="30"/></a>
+      <a class="nav-link active text-dark" href="#"><i class="fab fa-mailchimp fa-2x"></i></a>
       </li
       <li class="nav-item">
         <a class="nav-link color-grey  d-none d-md-block" href="<?=ROOTDIR?>">ACCUEIL</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link color-grey d-none d-md-block" href="<?=ROOTDIR?>chalets/">CHALETS</a>
+        <a class="nav-link color-grey d-none d-md-block" href="<?=ROOTDIR?>chalets/">PRODUITS</a>
       </li>
       <li class="stockpro"><a class="text-dark no-underline" href="<?=ROOTDIR?>">STOCKPRO</a></li>
       <?php echo $right ?>
@@ -65,7 +65,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
         <ul class="nav d-block">
           <li class="nav-item "><a class="nav-link color-grey" href="<?=ROOTDIR?>">ACCUEIL</a></li>
 
-          <li class="nav-item"><a class="nav-link color-grey" href="<?=ROOTDIR?>chalets/">CHALETS</a></li>
+          <li class="nav-item"><a class="nav-link color-grey" href="<?=ROOTDIR?>chalets/">PRODUITS</a></li>
 
           <li class="nav-item "><a class="nav-link  shadow-sm rounded" href="<?=ROOTDIR?>connexion">CONNEXION</a> </li>
           <li class="nav-item mt-3"><a class="nav-link  bg-primary rounded  color-white active" href="<?=ROOTDIR?>inscription/">INSCRIPTION</a></li>
