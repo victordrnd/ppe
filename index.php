@@ -1,5 +1,12 @@
 <?php
 
 include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
-include $_SERVER['DOCUMENT_ROOT'].'/includes/nav/nav.php';
+
+?>
+<body>
+
+</body>
+
+<?php
+include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';
 ?>
