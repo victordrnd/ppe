@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_SESSION['id'])){
   $right = '<div class="ml-auto mr-4 d-none d-md-block">
   <div class="dropdown">
