@@ -1,23 +1,29 @@
 <div class=" footer-dark mt-5 ml-4 ml-sm-0">
   <div class="row p-md-3 mt-3 footerpadding">
     <div class="col-sm">
-      <div class="d-inline ">
-          <i class="fab fa-mailchimp fa-2x d-none d-sm-block"></i><a href="<?=ROOTDIR?>" class="text-dark"><h3 class="mt-3" style="font-family: 'Orbitron', sans-serif;">STOCKPRO</h3></a>
+      <div class="d-inline" style="text-align: center;">
+          <i class="fab fa-mailchimp fa-2x d-none d-sm-block"></i>
+          <a href="<?=ROOTDIR?>" class="text-dark"><h3 class="mt-3" style="font-family: 'Orbitron', sans-serif;">STOCKPRO</h3></a>
       </div>
     </div>
     <div class="col-sm mb-sm-3">
-      <p>Qui sommes-nous ?</p>
-      <div class="d-inline">
-        <i data-feather="twitter"></i>
-        <i data-feather="facebook" class="ml-4"></i>
-        <i data-feather="linkedin" class="ml-4 lead"></i>
-      </div>
+        <div style="text-align: center;">
+              <p>Qui sommes-nous ?</p>
+              <div class="d-inline">
+                <i data-feather="twitter"></i>
+                <i data-feather="facebook" class="ml-4"></i>
+                <i data-feather="linkedin" class="ml-4 lead"></i>
+              </div>
+        </div>
     </div>
     <div class="col-sm mt-5 mt-sm-0">
-      <p>Informations légales</p>
-      <p>Nous contacter</p>
-      <p>Transparence de la plateforme</p>
-      <p>Foire aux questions</p>
+        <div style="text-align: center;"
+              <p>Transparence de la plateforme</p>
+              <p>Informations légales</p>
+              <p>Foire aux questions</p>
+              <p>Nous contacter</p>
+
+        </div>
     </div>
   </div>
 </div>
