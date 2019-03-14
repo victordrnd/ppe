@@ -44,9 +44,8 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Audiowide|Orbitron:900" rel="stylesheet">
 <header>
-
-
   <ul class="nav shadow-sm p-3 mb-5 " style="min-height:70px;">
     <li class="nav-item d-none d-md-block">
       <a class="nav-link active" href="#"><img src="<?=ROOTDIR?>assets/logo.svg" width="30"/></a>
@@ -57,7 +56,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
       <li class="nav-item">
         <a class="nav-link color-grey d-none d-md-block" href="<?=ROOTDIR?>chalets/">CHALETS</a>
       </li>
-      <li class="snowrent" ><a class="text-dark no-underline" href="<?=ROOTDIR?>">SNOWRENT</a></li>
+      <li class="stockpro"><a class="text-dark no-underline" href="<?=ROOTDIR?>">SNOWRENT</a></li>
       <?php echo $right ?>
       <!--Hamburger-->
       <li class="float-right d-block d-sm-none"><a data-toggle="collapse" class="text-dark" href="#navbarmobile"><i data-feather="menu" class=" mt-2 ml-2"></i></a></li>
@@ -89,11 +88,11 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
   .shadow-small{
     box-shadow: 0 5px 15px rgba(0,0,0,.08);
   }
-  .snowrent{
+  .stockpro{
     position:absolute;
     left:50%;
     transform:translateX(-50%);
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'Orbitron', sans-serif;
     font-weight:bolder;
     font-size:22px;
   }
