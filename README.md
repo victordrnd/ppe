@@ -17,3 +17,13 @@
 ### Pour mettre à jour le dossier depuis Git
 
 ` git pull `
+
+## To Do List
+
+- Faire la page d'accueil
+- Faire la classe Panier
+- Faire la page produit
+- Faire le panel utilisateur
+- Remplir la base de donnée d'informations
+- Faire la page Panier
+- Faire le processus d'inscription 
