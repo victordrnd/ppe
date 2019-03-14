@@ -12,9 +12,28 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    ``<img class="mac" src="assets/index/macbook.png" alt="">
+    <img class="s10" src="assets/index/s10.png" alt="">
   </div>
 </body>
-
+<style media="screen">
+.mac {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  width:474px;
+  height:374px;
+  transform: rotate(30deg);
+}
+.s10 {
+    position: absolute;
+    width: 250px;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    transform: rotate(-30deg);
+  }
+</style>
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';
 ?>
