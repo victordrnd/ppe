@@ -56,7 +56,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
       <li class="nav-item">
         <a class="nav-link color-grey d-none d-md-block" href="<?=ROOTDIR?>chalets/">CHALETS</a>
       </li>
-      <li class="stockpro"><a class="text-dark no-underline" href="<?=ROOTDIR?>">SNOWRENT</a></li>
+      <li class="stockpro"><a class="text-dark no-underline" href="<?=ROOTDIR?>">STOCKPRO</a></li>
       <?php echo $right ?>
       <!--Hamburger-->
       <li class="float-right d-block d-sm-none"><a data-toggle="collapse" class="text-dark" href="#navbarmobile"><i data-feather="menu" class=" mt-2 ml-2"></i></a></li>
