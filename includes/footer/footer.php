@@ -2,7 +2,7 @@
   <div class="row p-md-3 mt-3 footerpadding">
     <div class="col-sm">
       <div class="d-inline ">
-        <img class="d-none d-sm-block" src="<?=ROOTDIR?>assets/logo.svg" width="40" /><a href="<?=ROOTDIR?>" class="text-dark"><h3 class="mt-3" style="font-family: 'Major Mono Display', monospace;">SNOWRENT</h3></a>
+          <i class="fab fa-mailchimp fa-2x d-none d-sm-block"></i><a href="<?=ROOTDIR?>" class="text-dark"><h3 class="mt-3" style="font-family: 'Orbitron', sans-serif;">STOCKPRO</h3></a>
       </div>
     </div>
     <div class="col-sm mb-sm-3">
