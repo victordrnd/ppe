@@ -8,10 +8,7 @@ if(isset($_POST['submit'])){
   $response = null;
   $display = 'd-none';
 }
-if(isset($_SESSION['id'])){
-  header('location:../client/');
-  exit;
-}
+
 ?>
 <body>
   <div class="alert alert-danger container <?= $display?>" role="alert">

@@ -15,7 +15,9 @@ if(isset($_SESSION['id'])){
   </div>';
 }
 else{
-  $right = '<li class="nav-item col-4 ml-auto bg-primary rounded  d-none d-md-block" style="max-width:160px;text-align:center;">
+  $right = '
+  <li class="nav-item col-1 ml-auto"><a class="nav-link active text-dark mt-1 d-none d-md-block"><i class="fas fa-shopping-cart"></i> <span class="badge badge-secondary">0</span></a></li>
+  <li class=" bg-primary rounded  d-none d-md-block" style="max-width:160px;text-align:center;">
   <a class="nav-link active color-white " href="'.ROOTDIR.'inscription/">INSCRIPTION</a>
   </li>
   <a class="nav-link shadow-sm ml-3 bg-white rounded  d-none d-md-block" href="'.ROOTDIR.'connexion/">CONNEXION</a>';
@@ -44,6 +46,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <meta charset="utf-8">
+<script src="https://unpkg.com/feather-icons"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Audiowide|Orbitron:900" rel="stylesheet">
 <header>
