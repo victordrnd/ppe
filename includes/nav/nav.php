@@ -15,7 +15,7 @@ if(isset($_SESSION['id'])){
 }
 else{
   $right = '
-  <li class="nav-item col-1 ml-auto d-none d-md-block"><a class="nav-link active text-dark mt-0 d-none d-md-block"><i class="fas fa-shopping-cart"></i> <span class="badge badge-secondary">0</span></a></li>
+  <li class="nav-item col-1 ml-auto d-none d-md-block"><a class="nav-link active text-dark mt-0 d-none d-md-block" href="'.ROOTDIR.'panier/"><i class="fas fa-shopping-cart"></i> <span class="badge badge-primary">0</span></a></li>
   <li class= rounded  d-none d-md-block text-dark" style="max-width:160px;text-align:center;">
   <a class="nav-link active color-dark h6 d-none d-md-block" href="'.ROOTDIR.'inscription/" style="color:#212529">INSCRIPTION</a>
   </li>
