@@ -35,11 +35,9 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                   Découvrez Google Home.
                 </h5>
                 <p class="card-text">
-                  GOOGLE HOME ASSISTANT VOCAL GRIS
+                  Google Home assistant vocal gris
                 </p>
-                <p>
-                  <a class="btn btn-primary" href="#">Action</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>149.99</strong>
-                </p>
+                <p><a class="btn btn-primary" href="#">Achetez</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>149.99 €</strong></p>
               </div>
             </div>
           </div>
