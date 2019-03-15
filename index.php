@@ -29,16 +29,16 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
           <div class="col-md-6">
             <div class="card mt-2 mt-md-4 border-0 shadow-small">
-              <img class="card-img-top" alt="..." src="assets/index/test.jpg" />
+              <img class="card-img-top w-100" alt="..." src="assets/index/gghome1.png" />
               <div class="card-block p-3">
                 <h5 class="card-title">
-                  Card title
+                  Découvrez Google Home.
                 </h5>
                 <p class="card-text">
-                  Description prod
+                  GOOGLE HOME ASSISTANT VOCAL GRIS
                 </p>
                 <p>
-                  <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+                  <a class="btn btn-primary" href="#">Action</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>149.99</strong>
                 </p>
               </div>
             </div>
@@ -159,6 +159,8 @@ function stopparralax(){
 .zoom:hover {
   transition:0.3s;
 }
+
+
 </style>
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';
