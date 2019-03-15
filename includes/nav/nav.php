@@ -1,5 +1,4 @@
 <?php
-
 if(isset($_SESSION['id'])){
   $right = '<div class="ml-auto mr-4 d-none d-md-block">
   <div class="dropdown">
@@ -16,11 +15,11 @@ if(isset($_SESSION['id'])){
 }
 else{
   $right = '
-  <li class="nav-item col-1 ml-auto"><a class="nav-link active text-dark mt-1 d-none d-md-block"><i class="fas fa-shopping-cart"></i> <span class="badge badge-secondary">0</span></a></li>
-  <li class=" bg-primary rounded  d-none d-md-block" style="max-width:160px;text-align:center;">
-  <a class="nav-link active color-white " href="'.ROOTDIR.'inscription/">INSCRIPTION</a>
+  <li class="nav-item col-1 ml-auto d-none d-md-block"><a class="nav-link active text-dark mt-0 d-none d-md-block"><i class="fas fa-shopping-cart"></i> <span class="badge badge-secondary">0</span></a></li>
+  <li class= rounded  d-none d-md-block text-dark" style="max-width:160px;text-align:center;">
+  <a class="nav-link active color-dark h6 d-none d-md-block" href="'.ROOTDIR.'inscription/" style="color:#212529">INSCRIPTION</a>
   </li>
-  <a class="nav-link shadow-sm ml-3 bg-white rounded  d-none d-md-block" href="'.ROOTDIR.'connexion/">CONNEXION</a>';
+  <a class="nav-link shadow-sm ml-3  h6 bg-white rounded  d-none d-md-block" href="'.ROOTDIR.'connexion/">CONNEXION</a>';
 }
 if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVerif'] == 0) ){
   $right = '<div class="ml-auto mr-4 d-none d-md-block">
@@ -70,8 +69,8 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
 
           <li class="nav-item"><a class="nav-link color-grey" href="<?=ROOTDIR?>chalets/">PRODUITS</a></li>
 
-          <li class="nav-item "><a class="nav-link  shadow-sm rounded" href="<?=ROOTDIR?>connexion">CONNEXION</a> </li>
-          <li class="nav-item mt-3"><a class="nav-link  bg-primary rounded  color-white active" href="<?=ROOTDIR?>inscription/">INSCRIPTION</a></li>
+          <li class="nav-item "><a class="nav-link  shadow-sm rounded h6 text-dark" href="<?=ROOTDIR?>connexion">CONNEXION</a> </li>
+          <li class="nav-item mt-3"><a class="nav-link rounded  active h6 text-dark" href="<?=ROOTDIR?>inscription/">INSCRIPTION</a></li>
         </ul>
       </div>
     </ul>
