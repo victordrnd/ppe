@@ -29,7 +29,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
           <div class="col-md-6">
             <div class="card mt-2 mt-md-4 border-0 shadow-small">
-              <img class="card-img-top w-100" alt="..." src="assets/index/gghome1.png" />
+              <img id="menuImg" class="card-img-top w-100" alt="..." src="assets/index/gghome1.png" onmouseover="onHover();" onmouseout="offHover();"/>
               <div class="card-block p-3">
                 <h5 class="card-title">
                   Découvrez Google Home.
@@ -44,17 +44,15 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
           <div class="col-md-6 ">
             <div class="card mt-2 mt-md-4 border-0 shadow-small">
-              <img class="card-img-top" alt="..." src="assets/index/test.jpg" />
+              <img class="card-img-top" style="width: 406.36px; padding-top:3%;" alt="..." src="assets/index/phamtom.png" />
               <div class="card-block p-3">
                 <h5 class="card-title">
-                  Card title
+                  Classic Phantom
                 </h5>
                 <p class="card-text">
-                  Description produit
+                  Ressentez la musique avec une puissance, une netteté et une clarté jamais atteintes.
                 </p>
-                <p>
-                  <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                </p>
+                <p><a class="btn btn-primary" href="#">Achetez</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>1490 €</strong></p>
               </div>
             </div>
           </div>
@@ -95,22 +93,65 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     </div>
   </div>
 
-  <h1 class="text-center">Nos catégories</h1>
-  <div class="card mt-2 mt-md-4 border-0 shadow-small">
-    <img class="card-img-top" alt="..." src="assets/index/test.jpg" />
-    <div class="card-block p-3">
-      <h5 class="card-title">
-        Card title
-      </h5>
-      <p class="card-text">
-        Description produit
-      </p>
-      <p>
-        <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-      </p>
+  <h1 class="text-center mt-5">Nos catégories</h1>
+  <div class="row mt-5" style="margin:8px;">
+    <div class="col">
+      <div class="card">
+        <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
     </div>
   </div>
-
+  <div class="row mt-5" style="margin:8px;">
+    <div class="col">
+      <div class="card">
+        <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="vendor/rellax.min.js"></script>
 <script>
@@ -128,7 +169,17 @@ function stopparralax(){
     rellax.destroy();
   }
 }
+</script>
+<script type="text/javascript">
+function onHover()
+{
+  $("#menuImg").attr('src', 'assets/index/gghome2.png');
+}
 
+function offHover()
+{
+  $("#menuImg").attr('src', 'assets/index/gghome1.png');
+}
 </script>
 <style media="screen">
 .rellax{
