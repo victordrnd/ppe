@@ -26,4 +26,5 @@
 - Faire le panel utilisateur
 - Remplir la base de donnée d'informations
 - Faire la page Panier
-- Faire le processus d'inscription 
+- Faire le processus d'inscription
+- catégories(INFORMATIQUE, IMAGE & SON,TELEPHONIE & AUTO, OBJETS CONNECTES, JEUX VIDEO)

@@ -96,25 +96,25 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   <h1 class="text-center mt-5">Nos catégories</h1>
   <div class="row mt-5" style="margin:8px;">
     <div class="col">
-      <div class="card">
+      <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Card title</h5>
+        <div class="card-img-overlay ">
+          <h5 class="card-title">INFORMATIQUE</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">IMAGE & SON</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay">
           <h5 class="card-title">Card title</h5>
@@ -125,7 +125,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   </div>
   <div class="row mt-5" style="margin:8px;">
     <div class="col">
-      <div class="card">
+      <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay">
           <h5 class="card-title">Card title</h5>
@@ -134,7 +134,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay">
           <h5 class="card-title">Card title</h5>
@@ -143,7 +143,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay">
           <h5 class="card-title">Card title</h5>
