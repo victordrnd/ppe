@@ -1,5 +1,5 @@
 <?php
-
+$root = '';
 include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 ?>
@@ -37,7 +37,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 <p class="card-text">
                   Google Home assistant vocal gris
                 </p>
-                <p><a class="btn btn-primary" href="#">Achetez</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>149.99 €</strong></p>
+                <p><a class="btn btn-primary" href="#">Achetez</a><strong class="float-right">149.99 €</strong></p>
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 <p class="card-text">
                   Ressentez la musique avec une puissance, une netteté et une clarté jamais atteintes.
                 </p>
-                <p><a class="btn btn-primary" href="#">Achetez</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>1490 €</strong></p>
+                <p><a class="btn btn-primary" href="#">Achetez</a><strong class="float-right">1490 €</strong></p>
               </div>
             </div>
           </div>
