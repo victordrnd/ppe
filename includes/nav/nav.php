@@ -7,7 +7,7 @@ if(isset($_SESSION['id'])){
   </a>
   <div class="dropdown-menu border-0 shadow-small" aria-labelledby="dropdownMenuLink" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
   <a class="dropdown-item" href="'.ROOTDIR.'client"><i data-feather="bookmark"></i> Espace Membre</a>
-  <a class="dropdown-item" href="'.ROOTDIR.'client/reservations"><i data-feather="bell"></i> Mes réservations</a>
+  <a class="dropdown-item" href="'.ROOTDIR.'client/"><i data-feather="bell"></i> Mes réservations</a>
   <a class="dropdown-item" href="'.ROOTDIR.'client/process/logout.php"><i data-feather="power"></i> Déconnexion</a>
   </div>
   </div>
@@ -30,7 +30,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
   <div class="dropdown-menu border-0 shadow-small" aria-labelledby="dropdownMenuLink" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
   <span class="small p-3 text-center text-warning">Pensez à vérifier votre mail</span>
   <a class="dropdown-item" href="'.ROOTDIR.'client"><i data-feather="bookmark"></i> Espace Membre</a>
-  <a class="dropdown-item" href="'.ROOTDIR.'client/reservations"><i data-feather="bell"></i> Mes réservations</a>
+  <a class="dropdown-item" href="'.ROOTDIR.'client/"><i data-feather="bell"></i> Mes réservations</a>
   <a class="dropdown-item" href="'.ROOTDIR.'client/process/logout.php"><i data-feather="power"></i> Déconnexion</a>
   </div>
   </div>
@@ -38,7 +38,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
 }
 ?>
 <html>
-<title>StockPro - </title>
+<title>StockPro</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -57,7 +57,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
         <a class="nav-link color-grey  d-none d-md-block" href="<?=ROOTDIR?>">ACCUEIL</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link color-grey d-none d-md-block" href="<?=ROOTDIR?>chalets/">PRODUITS</a>
+        <a class="nav-link color-grey d-none d-md-block" href="<?=ROOTDIR?>products/">PRODUITS</a>
       </li>
       <li class="stockpro"><a class="text-dark no-underline" href="<?=ROOTDIR?>">STOCKPRO</a></li>
       <?php echo $right ?>
@@ -67,7 +67,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
         <ul class="nav d-block">
           <li class="nav-item "><a class="nav-link color-grey" href="<?=ROOTDIR?>">ACCUEIL</a></li>
 
-          <li class="nav-item"><a class="nav-link color-grey" href="<?=ROOTDIR?>chalets/">PRODUITS</a></li>
+          <li class="nav-item"><a class="nav-link color-grey" href="<?=ROOTDIR?>products/">PRODUITS</a></li>
 
           <li class="nav-item "><a class="nav-link  shadow-sm rounded h6 text-dark" href="<?=ROOTDIR?>connexion">CONNEXION</a> </li>
           <li class="nav-item mt-3"><a class="nav-link rounded  active h6 text-dark" href="<?=ROOTDIR?>inscription/">INSCRIPTION</a></li>
