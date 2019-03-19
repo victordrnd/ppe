@@ -3,7 +3,7 @@ $root = '';
 include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 ?>
-<body style="user-select:none;">
+<body>
 
   <div class="position-relative overflow-hidden p-3 px-md-5 m-md-3 text-center">
     <div class="col-md-5 p-lg-5 mx-auto my-5 ">
@@ -29,7 +29,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
           <div class="col-md-6">
             <div class="card mt-2 mt-md-4 border-0 shadow-small">
-              <img id="menuImg" class="card-img-top w-100" alt="..." src="assets/index/gghome1.png" onmouseover="onHover();" onmouseout="offHover();"/>
+              <img id="menuImg" class="card-img-top w-100" alt="..." src="assets/index/gghome1.png" onmouseover="onHover(this.id);" onmouseout="offHover(this.id);"/>
               <div class="card-block p-3">
                 <h5 class="card-title">
                   Découvrez Google Home.
@@ -44,7 +44,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
           <div class="col-md-6 ">
             <div class="card mt-2 mt-md-4 border-0 shadow-small">
-              <img class="card-img-top" style="width: 406.36px; padding-top:3%;" alt="..." src="assets/index/phamtom.png" />
+              <img class="card-img-top"  alt="..." src="assets/index/phamtom.png" />
               <div class="card-block p-3">
                 <h5 class="card-title">
                   Classic Phantom
@@ -94,17 +94,17 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   </div>
 
   <h1 class="text-center mt-5">Nos catégories</h1>
-  <div class="row mt-5" style="margin:8px;">
-    <div class="col">
+  <div class="row mt-5">
+    <div class="col-md col-12 mt-5 mt-md-0 ml-md-3">
       <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay ">
           <h5 class="card-title">INFORMATIQUE</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text text-white">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md col-12 mt-5 mt-md-0">
       <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay">
@@ -113,7 +113,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md col-12 mt-5 mt-md-0 mr-md-3">
       <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay">
@@ -123,8 +123,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
       </div>
     </div>
   </div>
-  <div class="row mt-5" style="margin:8px;">
-    <div class="col">
+  <div class="row mt-5">
+    <div class="col-md col-12 mt-5 mt-md-0 ml-md-3">
       <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay">
@@ -133,7 +133,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md col-12 mt-5 mt-md-0">
       <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay">
@@ -142,7 +142,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col-md col-12 mt-5 mt-md-0 mr-md-3">
       <div class="card border-0 shadow-small">
         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img" style="" alt="...">
         <div class="card-img-overlay">
@@ -171,14 +171,18 @@ function stopparralax(){
 }
 </script>
 <script type="text/javascript">
-function onHover()
+function onHover(id)
 {
-  $("#menuImg").attr('src', 'assets/index/gghome2.png');
+  //var image = document.getElementById(id);
+  //image.src = "assets/index/gghome1.png";
+  console.log(id);
+  console.log(this.id);
+  $("#" + id).attr('src', 'assets/index/gghome2.png');
 }
 
-function offHover()
+function offHover(id)
 {
-  $("#menuImg").attr('src', 'assets/index/gghome1.png');
+  $("#"+id).attr('src', 'assets/index/gghome1.png');
 }
 </script>
 <style media="screen">
@@ -208,8 +212,6 @@ function offHover()
 .zoom:hover {
   transition:0.3s;
 }
-
-
 </style>
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';

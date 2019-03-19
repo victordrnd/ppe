@@ -8,9 +8,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </div>
 <div class="container-fluid">
           <div class="row">
-
-                <div class=" col-sm-1 col-md-3" style="margin-bottom: 40px;">
-                    <div class="card" style="width: 18rem; text-align: center;">
+                <div class="col-sm-1 col-md-3">
+                    <div class="card" >
                         <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -19,8 +18,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                         </div>
                     </div>
                 </div>
-              <div class=" col-sm-1 col-md-3" style="margin-bottom: 40px;">
-                  <div class="card" style="width: 18rem; text-align: center;">
+              <div class=" col-sm-1 col-md-3">
+                  <div class="card" >
                       <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
                       <div class="card-body">
                           <h5 class="card-title">Card title</h5>
@@ -29,8 +28,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                       </div>
                   </div>
               </div>
-              <div class=" col-sm-1 col-md-3" style="margin-bottom: 40px;">
-                  <div class="card" style="width: 18rem; text-align: center;">
+              <div class=" col-sm-1 col-md-3">
+                  <div class="card" >
                       <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
                       <div class="card-body">
                           <h5 class="card-title">Card title</h5>
@@ -39,8 +38,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                       </div>
                   </div>
               </div>
-              <div class=" col-sm-1 col-md-3" style="margin-bottom: 40px;">
-                  <div class="card" style="width: 18rem; text-align: center;">
+              <div class=" col-sm-1 col-md-3">
+                  <div class="card" >
                       <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
                       <div class="card-body">
                           <h5 class="card-title">Card title</h5>
@@ -49,8 +48,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                       </div>
                   </div>
               </div>
-              <div class=" col-sm-1 col-md-3" style="margin-bottom: 40px;">
-                  <div class="card" style="width: 18rem; text-align: center;">
+              <div class=" col-sm-1 col-md-3">
+                  <div class="card" >
                       <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
                       <div class="card-body">
                           <h5 class="card-title">Card title</h5>
@@ -59,8 +58,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                       </div>
                   </div>
               </div>
-              <div class=" col-sm-1 col-md-3" style="margin-bottom: 40px;">
-                  <div class="card" style="width: 18rem; text-align: center;">
+              <div class=" col-sm-1 col-md-3">
+                  <div class="card" >
                       <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
                       <div class="card-body">
                           <h5 class="card-title">Card title</h5>
@@ -69,8 +68,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                       </div>
                   </div>
               </div>
-              <div class=" col-sm-1 col-md-3" style="margin-bottom: 40px;">
-                  <div class="card" style="width: 18rem; text-align: center;">
+              <div class=" col-sm-1 col-md-3">
+                  <div class="card" >
                       <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
                       <div class="card-body">
                           <h5 class="card-title">Card title</h5>
@@ -79,8 +78,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                       </div>
                   </div>
               </div>
-              <div class=" col-sm-1 col-md-3" style="margin-bottom: 40px;">
-                  <div class="card" style="width: 18rem; text-align: center;">
+              <div class=" col-sm-1 col-md-3">
+                  <div class="card" >
                       <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
                       <div class="card-body">
                           <h5 class="card-title">Card title</h5>
@@ -96,5 +95,3 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';
 ?>
-
-
