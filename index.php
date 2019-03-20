@@ -173,16 +173,15 @@ function stopparralax(){
 <script type="text/javascript">
 function onHover(id)
 {
-  //var image = document.getElementById(id);
-  //image.src = "assets/index/gghome1.png";
-  console.log(id);
-  console.log(this.id);
-  $("#" + id).attr('src', 'assets/index/gghome2.png');
+
+  document.getElementById(id).src = 'assets/index/gghome2.png';
+  //$("#" + id).attr('src', 'assets/index/gghome2.png');
 }
 
 function offHover(id)
 {
-  $("#"+id).attr('src', 'assets/index/gghome1.png');
+  document.getElementById(id).src = 'assets/index/gghome1.png';
+  //$("#"+id).attr('src', 'assets/index/gghome1.png');
 }
 </script>
 <style media="screen">
@@ -212,6 +211,7 @@ function offHover(id)
 .zoom:hover {
   transition:0.3s;
 }
+
 </style>
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';

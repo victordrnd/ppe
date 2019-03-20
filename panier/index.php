@@ -10,12 +10,12 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
           <li class="list-group-item">
             <div class="row">
               <div class="col-3">
-                <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="col-12"/>
+                <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="w-100 mt-4 mt-md-0"/>
               </div>
               <div class="col-6">
-                <p class="mt-4 text-center">Super produit de Stockpro</p>
+                <p class="mt-4 text-center ">Super produit </p>
               </div>
-              <div class="col-2">
+              <div class="col-1 col-md-2">
                 <select class="mt-4 form-groups border-0 ">
                   <option>1</option>
                   <option>2</option>
@@ -24,7 +24,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 </select>
               </div>
               <div class="col-1">
-                <p class="mt-4 text-center"><strong>54€</strong></p>
+                <p class="mt-4 text-center ml-2 ml-md-0"><strong>54€</strong></p>
               </div>
             </div>
           </li>
@@ -32,12 +32,12 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
           <li class="list-group-item">
             <div class="row">
               <div class="col-3">
-                <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="col-12"/>
+                <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="w-100 mt-4 mt-md-0"/>
               </div>
               <div class="col-6">
-                <p class="mt-4 text-center">Super produit de Stockpro</p>
+                <p class="mt-4 text-center ">Super produit </p>
               </div>
-              <div class="col-2">
+              <div class="col-1 col-md-2">
                 <select class="mt-4 form-groups border-0 ">
                   <option>1</option>
                   <option>2</option>
@@ -46,7 +46,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 </select>
               </div>
               <div class="col-1">
-                <p class="mt-4 text-center"><strong>54€</strong></p>
+                <p class="mt-4 text-center ml-2 ml-md-0"><strong>54€</strong></p>
               </div>
             </div>
           </li>
@@ -54,12 +54,12 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
           <li class="list-group-item">
             <div class="row">
               <div class="col-3">
-                <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="col-12"/>
+                <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="w-100 mt-4 mt-md-0"/>
               </div>
               <div class="col-6">
-                <p class="mt-4 text-center">Super produit de Stockpro</p>
+                <p class="mt-4 text-center ">Super produit </p>
               </div>
-              <div class="col-2">
+              <div class="col-1 col-md-2">
                 <select class="mt-4 form-groups border-0 ">
                   <option>1</option>
                   <option>2</option>
@@ -68,7 +68,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 </select>
               </div>
               <div class="col-1">
-                <p class="mt-4 text-center"><strong>54€</strong></p>
+                <p class="mt-4 text-center ml-2 ml-md-0"><strong>54€</strong></p>
               </div>
             </div>
           </li>
