@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
     <i class="fas fa-exclamation-triangle"></i> <?=$response?>
   </div>
   <div class="row mb-5">
-    <div class="card d-block m-auto my-auto col-sm-11  mt-md-5 mb-sm-5 col-md-6 justify-content-center">
+    <div class="card d-block m-auto my-auto col-sm-11  mt-md-5 mb-sm-5 col-md-6 justify-content-center border-0 shadow-small">
       <div class="card-body">
         <h5 class="card-title">Connexion</h5>
         <svg style="display:block;margin-left:auto;margin-right:auto;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width:"70px" height="70px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
