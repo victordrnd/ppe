@@ -174,7 +174,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </div>
 <div class="row">
   <div class="col-md-6 col-12">
-    <div class="col-md-6 col-12">
+    <div class="col-md-6">
       <div class="card border-0 shadow-small mt-5 card-height2">
         <div class="card border-0 text-center">
           <div class="card-body">
@@ -184,27 +184,43 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
           </div>
         </div>
       </div>
+    </div>
+    <div class="col-md-6">
       <div class="card border-0 shadow-small mt-5 card-height2">
         <div class="card border-0 text-center">
           <div class="card-body">
             <img class="w-75" src="assets/index/mavicpro.png" alt="">
-            <h5 class="card-title mt-2">Apple Watch 4</h5>
+            <h5 class="card-title mt-2">Mavic Pro 2</h5>
             <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
           </div>
         </div>
       </div>
     </div>
     <div class="col-md-6 col-12">
-      <div class="card border-0 shadow-small">
-
+      <div class="card border-0 shadow-small mt-5 card-height2">
+        <div class="card border-0 text-center">
+          <div class="card-body">
+            <img class="w-75" src="assets/index/mavicpro.png" alt="">
+            <h5 class="card-title mt-2">Mavic Pro 2</h5>
+            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+          </div>
+        </div>
       </div>
-      <div class="card border-0 shadow-small">
-
+    </div>
+    <div class="col-md-6 col-12">
+      <div class="card border-0 shadow-small mt-5 card-height2">
+        <div class="card border-0 text-center">
+          <div class="card-body">
+            <img class="w-75" src="assets/index/mavicpro.png" alt="">
+            <h5 class="card-title mt-2">Mavic Pro 2</h5>
+            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="col-md-6 col-12 px-0">
-    <img src="assets/index/s10buds.webp" alt="">
+    <img class="w-100" src="assets/index/s10buds.webp" alt="">
   </div>
 
 </div>
