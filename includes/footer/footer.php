@@ -31,7 +31,7 @@
       <div class="col-sm mt-5 mt-sm-0">
         <div style="text-align: center;"
         <p>Transparence de la plateforme</p>
-        <p>Informations légales</p>
+        <p>Informations l&eacute;gales</p>
         <p>Foire aux questions</p>
         <p>Nous contacter</p>
 
