@@ -63,6 +63,29 @@
   height:18px;
   margin-top:-3px;
 }
+
+.fa-cc-visa:hover
+{
+  color:#ffc107;
+}
+
+.fa-cc-paypal:hover
+{
+  color:#ffc107;
+}
+
+.fa-cc-apple-pay:hover
+{
+  color:#ffc107;
+}
+
+.fa-cc-mastercard:hover
+{
+  color:#ffc107;
+}
+.fa-mailchimp:hover{
+  color:#ffc107;
+}
 </style>
 <script>
 feather.replace()
