@@ -24,9 +24,9 @@ class Produit{
     return $produitinfo;
   }
   public function getProduitByCat($catcode){
-    $produitinfo = $this->bdd->select('produit','*', 'CATCode='.tostring($catcode));
+    $produitinfo = $this->bdd->select('produit','*', 'PRODCatCode='.tostring($catcode));
     return $produitinfo;
   }
-  
+
 }
 ?>
