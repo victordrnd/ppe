@@ -158,7 +158,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </a>
 </div>
 </div>
-<h1 class="display-4 font-weight-normal text-center mt-5">Nouveaut&eacute;</h1>
+<h1 class="display-4 font-weight-normal text-center mt-5">Nouveaut&eacute;s</h1>
 <div class="row mt-5">
   <div class="col-md-6 col-12 px-0">
     <img src="assets/index/samsung8k.png" alt="" class="w-100">
@@ -172,57 +172,61 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-md-6 col-12">
+<div class="container-fluid">
+  <div class="row">
     <div class="col-md-6">
-      <div class="card border-0 shadow-small mt-5 card-height2">
-        <div class="card border-0 text-center">
-          <div class="card-body">
-            <img class="w-50 " src="assets/index/applew.png" alt="">
-            <h5 class="card-title mt-2">Apple Watch 4</h5>
-            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card border-0 shadow-small mt-5 card-height2">
+            <div class="card border-0 text-center">
+              <div class="card-body">
+                <img class="w-75" src="assets/index/mavicpro.png" alt="">
+                <h5 class="card-title mt-2">Mavic Pro 2</h5>
+                <p class="card-text">Le dernier drone grandd public embl&eacute;matique de DJI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="card border-0 shadow-small mt-5 card-height2">
+            <div class="card border-0 text-center">
+              <div class="card-body">
+                <img class="w-50 " src="assets/index/applew.png" alt="">
+                <h5 class="card-title mt-2">Apple Watch 4</h5>
+                <p class="card-text">Toute nouvelle version. <br/>
+                  Lib&eacute;rez le meilleur de vous&#45;m&ecirc;me.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card border-0 shadow-small mt-5 card-height2">
+            <div class="card border-0 text-center">
+              <div class="card-body">
+                <img class="w-50 " src="assets/index/matex.png" alt="">
+                <h5 class="card-title mt-2">Huawei Mate X</h5>
+                <p class="card-text">Dites bonjour au tout premier t&eacute;l&eacute;phone 5G pliable le plus rapide au monde</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card border-0 shadow-small mt-5 card-height2">
+            <div class="card border-0 text-center">
+              <div class="card-body">
+                <img class="w-75 " src="assets/index/xps.png" alt="">
+                <h5 class="card-title mt-2">Ultrabook Dell XPS 13"</h5>
+                <p class="card-text">Superbe &agrave; l&apos;int&eacute;rieur comme &agrave; l&apos;ext&eacute;rieur.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="card border-0 shadow-small mt-5 card-height2">
-        <div class="card border-0 text-center">
-          <div class="card-body">
-            <img class="w-75" src="assets/index/mavicpro.png" alt="">
-            <h5 class="card-title mt-2">Mavic Pro 2</h5>
-            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-12">
-      <div class="card border-0 shadow-small mt-5 card-height2">
-        <div class="card border-0 text-center">
-          <div class="card-body">
-            <img class="w-75" src="assets/index/mavicpro.png" alt="">
-            <h5 class="card-title mt-2">Mavic Pro 2</h5>
-            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-12">
-      <div class="card border-0 shadow-small mt-5 card-height2">
-        <div class="card border-0 text-center">
-          <div class="card-body">
-            <img class="w-75" src="assets/index/mavicpro.png" alt="">
-            <h5 class="card-title mt-2">Mavic Pro 2</h5>
-            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-6 px-0">
+      <img class="w-100" alt="..." src="assets/index/s10buds.webp" />
     </div>
   </div>
-  <div class="col-md-6 col-12 px-0">
-    <img class="w-100" src="assets/index/s10buds.webp" alt="">
-  </div>
-
 </div>
 </body>
 <script src="vendor/rellax.min.js"></script>
