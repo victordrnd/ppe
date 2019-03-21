@@ -24,7 +24,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 </select>
               </div>
               <div class="col-1">
-                <p class="mt-4 text-center ml-2 ml-md-0"><strong>54€</strong></p>
+                <p class="mt-4 text-center ml-2 ml-md-0"><strong>54&euro;</strong></p>
               </div>
             </div>
           </li>
@@ -46,7 +46,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 </select>
               </div>
               <div class="col-1">
-                <p class="mt-4 text-center ml-2 ml-md-0"><strong>54€</strong></p>
+                <p class="mt-4 text-center ml-2 ml-md-0"><strong>54&euro;</strong></p>
               </div>
             </div>
           </li>
@@ -68,7 +68,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 </select>
               </div>
               <div class="col-1">
-                <p class="mt-4 text-center ml-2 ml-md-0"><strong>54€</strong></p>
+                <p class="mt-4 text-center ml-2 ml-md-0"><strong>54&euro;</strong></p>
               </div>
             </div>
           </li>
@@ -78,9 +78,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     <div class="col-md col-12 p-0 mt-4 mt-md-0 ml-md-3">
       <div class="shadow-small p-3">
         <h3>Récapitulatif</h3>
-        <h6 class="mt-3">Sous total : <span class="float-right">54€</span></h6>
-        <p class="small"><strong>TVA : <span class="float-right">10€</span></strong></p>
-        <h6 class="mt-5 border-top pt-3">Total : <span class="float-right">64€</span></h6>
+        <h6 class="mt-3">Sous total : <span class="float-right">54&euro;</span></h6>
+        <p class="small"><strong>TVA : <span class="float-right">10&euro;</span></strong></p>
+        <h6 class="mt-5 border-top pt-3">Total : <span class="float-right">64&euro;</span></h6>
       </div>
       <form class="card p-0 mt-5 border-0 shadow-small">
         <div class="input-group">
