@@ -9,7 +9,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     <div class="col-md-5 p-lg-5 mx-auto my-5 ">
       <h1 class="display-4 font-weight-normal">Les nouveautées</h1>
       <p class="lead font-weight-normal">StockPro, n°1 du high-tech et du matériel informatique, élu Service Client de l'Année. Comparez et achetez en livraison rapide à domicile.</p>
-      <a class="btn btn-outline-primary" href="#">Découvrez</a>
+      <a class="btn btn-warning" href="#">Découvrez</a>
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
@@ -37,7 +37,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 <p class="card-text">
                   Google Home assistant vocal gris
                 </p>
-                <p><a class="btn btn-primary" href="#">Achetez</a><strong class="float-right">149.99 €</strong></p>
+                <p><a class="btn btn-warning" href="#">Achetez</a><strong class="float-right">149.99 €</strong></p>
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 <p class="card-text">
                   Ressentez la musique avec une puissance, une netteté et une clarté jamais atteintes.
                 </p>
-                <p><a class="btn btn-primary" href="#">Achetez</a><strong class="float-right">1490 €</strong></p>
+                <p><a class="btn btn-warning" href="#">Achetez</a><strong class="float-right">1490 €</strong></p>
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                   Description produit
                 </p>
                 <p>
-                  <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+                  <a class="btn btn-warning" href="#">Action</a> <a class="btn" href="#">Action</a>
                 </p>
               </div>
             </div>
@@ -83,7 +83,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                   Description produit
                 </p>
                 <p>
-                  <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+                  <a class="btn btn-warning" href="#">Action</a> <a class="btn" href="#">Action</a>
                 </p>
               </div>
             </div>
