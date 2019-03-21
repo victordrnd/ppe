@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 19 mars 2019 à 09:35
+-- Généré le :  jeu. 21 mars 2019 à 08:45
 -- Version du serveur :  10.1.36-MariaDB
 -- Version de PHP :  7.1.22
 
@@ -33,6 +33,17 @@ CREATE TABLE `categorie` (
   `CATLibelle` varchar(255) DEFAULT NULL,
   `CATDesc` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `categorie`
+--
+
+INSERT INTO `categorie` (`CATCode`, `CATLibelle`, `CATDesc`) VALUES
+('IMAGESON', 'Image & Son', NULL),
+('INFORMATIQUE', 'Informatique', NULL),
+('OBJETSCO', 'Objets Connectés', NULL),
+('ORDI', 'Ordinateur', NULL),
+('TEL', 'Téléphone', NULL);
 
 -- --------------------------------------------------------
 
@@ -92,6 +103,18 @@ CREATE TABLE `produit` (
   `PRODDesc` varchar(255) DEFAULT NULL,
   `PRODCatCode` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `produit`
+--
+
+INSERT INTO `produit` (`PRODRef`, `PRODLibelle`, `PRODPrix`, `PRODDesc`, `PRODCatCode`) VALUES
+('IPHONEXS64AG', 'iPhone XS 64Go Argent', '1159', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL'),
+('IPHONEXS64GR', 'iPhone XS 64Go Gris Sidéral', '1159', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL'),
+('IPHONEXS64OR', 'iPhone XS 64Go Or', '1159', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL'),
+('IPHONEXSMAX64AG', 'iPhone XS Max 64Go Argent', '1259', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL'),
+('IPHONEXSMAX64GR', 'iPhone XS Max 64Go Gris Sidéral', '1259', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL'),
+('IPHONEXSMAX64OR', 'iPhone XS Max 64Go Or', '1259', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL');
 
 --
 -- Index pour les tables déchargées
