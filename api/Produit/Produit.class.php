@@ -16,13 +16,17 @@ class Produit{
     return $produitinfo;
   }
 
-  public static function getProduitById($produitid){
+  public function getProduitById($produitid){
     $produitinfo = $this->bdd->select('produit', '*', 'PRODRef='.tostring($produitid));
     $categorie = new Categorie;
     $categorieinfo = $categorie->getCategorieById($produitinfo[0]['PRODCatCode']);
     $produitinfo[0]['Categorie'] = $categorieinfo[0];
     return $produitinfo;
   }
-
+  public function getProduitByCat($catcode){
+    $produitinfo = $this->bdd->select('produit','*', 'CATCode='.tostring($catcode));
+    return $produitinfo;
+  }
+  
 }
 ?>

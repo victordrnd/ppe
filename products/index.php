@@ -1,7 +1,9 @@
 <?php
 $root = '';
 include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
-
+$tel = new Produit;
+$telinfo = $tel->getProduitByCat('TEL');
+var_dump($telinfo);
 ?>
 <div  class="nav-link active color-dark h6 d-none d-md-block" style="text-align: center; margin-bottom: 50px; font-size: 2em;">
     TOUS NOS PRODUITS
