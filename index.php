@@ -8,7 +8,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   <div class="position-relative overflow-hidden p-3 px-md-5 m-md-3 text-center">
     <div class="col-md-5 p-lg-5 mx-auto my-5 ">
       <h1 class="display-4 font-weight-normal">Les nouveaut&eacute;es</h1>
-      <p class="lead font-weight-normal">StockPro, n°1 du high-tech et du mat&eacute;riel informatique, &eacute;lu Service Client de l'Ann&eacute;e. Comparez et achetez en livraison rapide à domicile.</p>
+      <p class="lead font-weight-normal">StockPro, n&deg;1 du high-tech et du mat&eacute;riel informatique, &eacute;lu Service Client de l'Ann&eacute;e. Comparez et achetez en livraison rapide &agrave; domicile.</p>
       <a class="btn btn-warning" href="#">D&eacute;couvrez</a>
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
@@ -158,18 +158,55 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </a>
 </div>
 </div>
-<div class="row" style="margin-top:5%">
-  <div class="col-md-6 col-12">
-    <img src="assets/index/samsung8k.png" alt="" style="width:102%;">
+<h1 class="display-4 font-weight-normal text-center mt-5">Nouveaut&eacute;</h1>
+<div class="row mt-5">
+  <div class="col-md-6 col-12 px-0">
+    <img src="assets/index/samsung8k.png" alt="" class="w-100">
   </div>
-  <div class="col-md-6 col-12" style="background-color:white;">
+  <div class="col-md-6 col-12 bg-white px-0">
     <div class="center-block">
-    <h3 class="text-center" style="margin-top:20%;">Entrez dans une nouvelle dimension,<br />
-      QLED 8K,
-      La r&eacute;alit&eacute; plus que parfaite.
-    </h3>
-</div>
+      <h3 class="text-center display-4 mt-5" >Entrez dans une nouvelle dimension,<br />
+        QLED 8K,
+        La r&eacute;alit&eacute; plus que parfaite.
+      </h3>
+    </div>
   </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-12">
+    <div class="col-md-6 col-12">
+      <div class="card border-0 shadow-small mt-5 card-height2">
+        <div class="card border-0 text-center">
+          <div class="card-body">
+            <img class="w-50 " src="assets/index/applew.png" alt="">
+            <h5 class="card-title mt-2">Apple Watch 4</h5>
+            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 shadow-small mt-5 card-height2">
+        <div class="card border-0 text-center">
+          <div class="card-body">
+            <img class="w-75" src="assets/index/mavicpro.png" alt="">
+            <h5 class="card-title mt-2">Apple Watch 4</h5>
+            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-12">
+      <div class="card border-0 shadow-small">
+
+      </div>
+      <div class="card border-0 shadow-small">
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-12 px-0">
+    <img src="assets/index/s10buds.webp" alt="">
+  </div>
+
 </div>
 </body>
 <script src="vendor/rellax.min.js"></script>
@@ -232,6 +269,9 @@ function offHover(id)
 }
 .card-height{
   height: 30rem;
+}
+.card-height2{
+  height: 20rem;
 }
 </style>
 <?php
