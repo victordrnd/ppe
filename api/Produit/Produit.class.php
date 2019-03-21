@@ -18,9 +18,12 @@ class Produit{
 
   public function getProduitById($produitid){
     $produitinfo = $this->bdd->select('produit', '*', 'PRODRef='.tostring($produitid));
-    $categorie = new Categorie;
-    $categorieinfo = $categorie->getCategorieById($produitinfo[0]['PRODCatCode']);
-    $produitinfo[0]['Categorie'] = $categorieinfo[0];
+    if(!empty($productinfo)){
+      $categorie = new Categorie;
+      $categorieinfo = $categorie->getCategorieById($produitinfo[0]['PRODCatCode']);
+      $produitinfo[0]['Categorie'] = $categorieinfo[0];
+    }
+
     return $produitinfo;
   }
   public function getProduitByCat($catcode){

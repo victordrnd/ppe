@@ -2,7 +2,7 @@
 
 class Categorie
 {
-  private $bdd
+  private $bdd;
   public function __construct(){
       $this->bdd = new Crud;
   }
