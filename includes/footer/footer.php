@@ -6,6 +6,15 @@
         <div class="d-inline" style="text-align: center;">
           <i class="fab fa-mailchimp fa-2x d-none d-sm-block"></i>
           <a href="<?=ROOTDIR?>" class="text-dark"><h3 class="mt-3" style="font-family: 'Orbitron', sans-serif;">STOCKPRO</h3></a>
+          <br/>
+          <div class="container-fluid px-5">
+              <div class="row px-5">
+                    <div class="col-sm-3"><i class="fab fa-cc-apple-pay fa-2x"></i></div>
+                    <div class="col-sm-3"><i class="fab fa-cc-visa fa-2x"></i></div>
+                    <div class="col-sm-3"><i class="fab fa-cc-paypal fa-2x"></i></div>
+                    <div class="col-sm-3"><i class="fab fa-cc-mastercard fa-2x"></i></div>
+              </div>
+          </div>
         </div>
       </div>
       <div class="col-sm mb-sm-3">
@@ -15,6 +24,7 @@
             <i data-feather="twitter"></i>
             <i data-feather="facebook" class="ml-4"></i>
             <i data-feather="linkedin" class="ml-4 lead"></i>
+
           </div>
         </div>
       </div>
@@ -28,6 +38,8 @@
       </div>
     </div>
   </div>
+  <br/>
+  <div style="border-top:black 2px solid; text-align:center"><i class="far fa-copyright"></i> copyright-2019  </div>
 </div>
 </div>
 </html>
