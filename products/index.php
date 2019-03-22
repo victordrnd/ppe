@@ -211,6 +211,8 @@ $('.addtocart').click(function(){
       'productId': this.id,
     }
   });
+  var numberInCart = document.getElementById('numberInCart')
+  numberInCart.innerHTML = parseInt(numberInCart.innerHTML) += 1;
 })
 
 
