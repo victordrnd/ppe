@@ -20,10 +20,10 @@ $panier = new Panier;
               <li class="list-group-item">
                 <div class="row">
                   <div class="col-3">
-                    <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="w-100 mt-4 mt-md-0"/>
+                    <img src="../assets/upload/produits/<?=$produit['ProductId']?>.png" class="w-100 mt-4 mt-md-0 img-fluid w-25"/>
                   </div>
                   <div class="col-6">
-                    <p class="mt-4 text-center "><?=$produit['Productinfo']['PRODLibelle']?></p>
+                    <p class="mt-4 text-center align-middle"><?=$produit['Productinfo']['PRODLibelle']?></p>
                   </div>
                   <div class="col-1 col-md-2">
                     <input type="number" value="<?=$produit['number']?>" class="mt-4 form-groups border-0 w-50"/>
@@ -33,13 +33,30 @@ $panier = new Panier;
                   </div>
                 </div>
               </li>
-              <li class="list-group-item">
-              </li>
               <?php
             }
             $prixht = $prixtotal *0.8;
             $tva = $prixtotal - $prixht;
           }
+          else{
+            $prixht = 0;
+            $tva = 0;
+            $prixtotal = 0;
+            ?>
+            <li class="list-group-item">
+              <div class="row text-center">
+                <div class="alert alert-light text-center col-12" role="alert">
+                  Votre panier est vide.
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+            </li>
+            <?php
+          }
+
+
+
           ?>
         </ul>
       </div>
@@ -59,8 +76,8 @@ $panier = new Panier;
           </div>
         </div>
       </form>
+    </div>
   </div>
-</div>
 
 
 </body>

@@ -38,8 +38,6 @@
       </div>
     </div>
   </div>
-  <br/>
-  <div style="border-top:black 2px solid; text-align:center"><i class="far fa-copyright"></i> copyright-2019  </div>
 </div>
 </div>
 </html>

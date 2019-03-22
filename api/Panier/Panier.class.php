@@ -4,21 +4,19 @@ class Panier{
     if(isset($_COOKIE['ProductsInCart'])){
       $array = json_decode($_COOKIE['ProductsInCart']);
       $array[] = $productid;
-      $products = json_encode($array);
-      setcookie('ProductsInCart', $products, time()+60*60*24*30);
+      $_SESSION['ProductsInCart'] = json_encode($array);
     }
     else{
       $array[] = $productid;
-      $products = json_encode($array);
-      setcookie('ProductsInCart', $products, time()+60*60*24*30);
+      $_SESSION['ProductsInCart'] = json_encode($array);
     }
     $_SESSION['NumberCart'] += 1;
   }
 
 
   public function getCart($moreinfo = false){
-    if(isset($_COOKIE['ProductsInCart'])){
-      $cart = array_count_values(json_decode($_COOKIE['ProductsInCart']));
+    if(isset($_SESSION['ProductsInCart'])){
+      $cart = array_count_values(json_decode($_SESSION['ProductsInCart']));
       while (list ($id, $val) = each ($cart)) {
 
         $array[] = array("ProductId" => $id, "number" => $val);

@@ -6,7 +6,7 @@ class Produit{
     $this->bdd = new Crud;
   }
 
-  public static function getAll(){
+  public static function getAll($number=null){
     $produitinfo = $this->bdd->select('produit', '*');
     $categorie = new Categorie;
     foreach ($produitinfo as $index => $categorieinfo) {

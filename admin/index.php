@@ -3,7 +3,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 if(isset($_POST['submit'])){
   $produit = new Produit;
-  
+  $produit->ajouter($_POST['ref'], $_POST['nom'],$_POST['prix'], $_POST['desc'], $_POST['cat']);
+  $produit->upload($_FILES['image'], $_POST['ref']);
+
 }
  ?>
  <body>
