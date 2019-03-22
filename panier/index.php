@@ -15,12 +15,12 @@ $panier = new Panier;
             $productlist = $panier->getCart(true);
             $prixtotal = 0;
             foreach($productlist as $produit){
-              $prixtotal += $produit['Productinfo']['PRODPrix'];
+              $prixtotal += $produit['Productinfo']['PRODPrix'] * $produit['number'];
               ?>
               <li class="list-group-item">
                 <div class="row">
                   <div class="col-3">
-                    <img src="../assets/upload/produits/<?=$produit['ProductId']?>.png" class="w-100 mt-4 mt-md-0 img-fluid w-25"/>
+                    <img src="../assets/upload/produits/<?=$produit['ProductId']?>.png" class=" mt-4 mt-md-0 img-fluid w-25 mx-auto d-block"/>
                   </div>
                   <div class="col-6">
                     <p class="mt-4 text-center align-middle"><?=$produit['Productinfo']['PRODLibelle']?></p>
@@ -29,7 +29,7 @@ $panier = new Panier;
                     <input type="number" value="<?=$produit['number']?>" class="mt-4 form-groups border-0 w-50"/>
                   </div>
                   <div class="col-1">
-                    <p class="mt-4 text-center ml-2 ml-md-0"><strong><?=$produit['Productinfo']['PRODPrix']?>&euro;</strong></p>
+                    <p class="mt-4 text-center ml-2 ml-md-0"><strong><?=$produit['Productinfo']['PRODPrix'] * $produit['number']?>&euro;</strong></p>
                   </div>
                 </div>
               </li>

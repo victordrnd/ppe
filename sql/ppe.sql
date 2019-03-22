@@ -109,7 +109,7 @@ CREATE TABLE `produit` (
 --
 
 INSERT INTO `produit` (`PRODRef`, `PRODLibelle`, `PRODPrix`, `PRODDesc`, `PRODCatCode`) VALUES
-('IPHONEXS64AG', 'iPhone XS 64Go Argent', '1159', '', 'TEL'),
+('IPHONEXS64AG', 'iPhone XS 64Go Argent', '1159', 'é', 'TEL'),
 ('IPHONEXS64GR', 'iPhone XS 64Go Gris Sidéral', '1159', '', 'TEL'),
 ('IPHONEXS64OR', 'iPhone XS 64Go Or', '1159', '', 'TEL'),
 ('IPHONEXSMAX64AG', 'iPhone XS Max 64Go Argent', '1259', '', 'TEL'),

@@ -2,6 +2,7 @@
 header('Content-type: text/html; charset=ISO-8859-1');
 $root = '';
 include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
+
 $produit = new Produit;
 $telinfo = $produit->getProduitByCat('TEL');
 
@@ -205,14 +206,12 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 <script>
 $('.addtocart').click(function(){
   $.ajax({
-    type: 'POST',
+    type: 'GET',
     url: '../process/addtocart.php',
     data: {
       'productId': this.id,
     }
   });
-  var numberInCart = document.getElementById('numberInCart')
-  numberInCart.innerHTML = parseInt(numberInCart.innerHTML) += 1;
 })
 
 

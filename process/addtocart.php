@@ -1,7 +1,7 @@
 <?php
 include '../includes/header.php';
-//if(isset($_POST['productId'])){
+if(isset($_GET['productId'])){
   $panier = new Panier;
-  $panier->addToCart($_POST['productId']);
-//}
+  $panier->addToCart($_GET['productId']);
+}
  ?>

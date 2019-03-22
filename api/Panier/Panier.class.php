@@ -1,8 +1,8 @@
 <?php
 class Panier{
   public function addToCart($productid){
-    if(isset($_COOKIE['ProductsInCart'])){
-      $array = json_decode($_COOKIE['ProductsInCart']);
+    if(isset($_SESSION['ProductsInCart'])){
+      $array = json_decode($_SESSION['ProductsInCart']);
       $array[] = $productid;
       $_SESSION['ProductsInCart'] = json_encode($array);
     }
