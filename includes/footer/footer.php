@@ -9,10 +9,10 @@
           <br/>
           <div class="container-fluid px-5">
               <div class="row px-5">
-                    <div class="col-sm-3"><i class="fab fa-cc-apple-pay fa-2x"></i></div>
-                    <div class="col-sm-3"><i class="fab fa-cc-visa fa-2x"></i></div>
-                    <div class="col-sm-3"><i class="fab fa-cc-paypal fa-2x"></i></div>
-                    <div class="col-sm-3"><i class="fab fa-cc-mastercard fa-2x"></i></div>
+                    <div class="col-3"><i class="fab fa-cc-apple-pay fa-2x"></i></div>
+                    <div class="col-3"><i class="fab fa-cc-visa fa-2x"></i></div>
+                    <div class="col-3"><i class="fab fa-cc-paypal fa-2x"></i></div>
+                    <div class="col-3"><i class="fab fa-cc-mastercard fa-2x"></i></div>
               </div>
           </div>
         </div>
@@ -29,9 +29,9 @@
         </div>
       </div>
       <div class="col-sm mt-5 mt-sm-0">
-        <div style="text-align: center;"
+        <div class="text-center">
         <p>Transparence de la plateforme</p>
-        <p>Informations l&eacute;gales</p>
+        <p>Informations légales</p>
         <p>Foire aux questions</p>
         <p>Nous contacter</p>
 

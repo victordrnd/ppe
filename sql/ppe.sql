@@ -109,12 +109,12 @@ CREATE TABLE `produit` (
 --
 
 INSERT INTO `produit` (`PRODRef`, `PRODLibelle`, `PRODPrix`, `PRODDesc`, `PRODCatCode`) VALUES
-('IPHONEXS64AG', 'iPhone XS 64Go Argent', '1159', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL'),
-('IPHONEXS64GR', 'iPhone XS 64Go Gris Sidéral', '1159', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL'),
-('IPHONEXS64OR', 'iPhone XS 64Go Or', '1159', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL'),
-('IPHONEXSMAX64AG', 'iPhone XS Max 64Go Argent', '1259', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL'),
-('IPHONEXSMAX64GR', 'iPhone XS Max 64Go Gris Sidéral', '1259', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL'),
-('IPHONEXSMAX64OR', 'iPhone XS Max 64Go Or', '1259', 'Super Retina. En grand. En très grand. Créé spécialement, l’écran OLED de l’iPhone XS offre les couleurs les plus précises du marché, le HDR et des noirs vraiment fidèles. Et l’iPhone XS Max bénéficie d’un écran aux dimensions inédites sur iPhone.', 'TEL');
+('IPHONEXS64AG', 'iPhone XS 64Go Argent', '1159', '', 'TEL'),
+('IPHONEXS64GR', 'iPhone XS 64Go Gris Sidéral', '1159', '', 'TEL'),
+('IPHONEXS64OR', 'iPhone XS 64Go Or', '1159', '', 'TEL'),
+('IPHONEXSMAX64AG', 'iPhone XS Max 64Go Argent', '1259', '', 'TEL'),
+('IPHONEXSMAX64GR', 'iPhone XS Max 64Go Gris Sidéral', '1259', '', 'TEL'),
+('IPHONEXSMAX64OR', 'iPhone XS Max 64Go Or', '1259', '', 'TEL');
 
 --
 -- Index pour les tables déchargées

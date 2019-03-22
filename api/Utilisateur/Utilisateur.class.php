@@ -44,8 +44,8 @@ class Utilisateur
         $row = "CLIId, CliMail, CLIPassword, CLIDateInscription, CLINom, CLIPrenom";
         $req = $this->bdd->insert('client', $value, $row);
         $nometprenom = $nom.' '.$prenom;
-        $mailclass = new Mail;
-        $mailclass->inscription($id,$mail,$nometprenom);
+        //$mailclass = new Mail;
+        //$mailclass->inscription($id,$mail,$nometprenom);
         $_SESSION['mail'] = $mail;
         $_SESSION['prenom'] = $prenom;
         $_SESSION['nom'] = $nom;

@@ -63,7 +63,7 @@ $panier = new Panier;
     </div>
     <div class="col-md col-12 p-0 mt-4 mt-md-0 ml-md-3">
       <div class="shadow-small p-3">
-        <h3>R&eacute;capitulatif</h3>
+        <h3>Récapitulatif</h3>
         <h6 class="mt-3">Sous total HT: <span class="float-right"><?=$prixht?>&euro;</span></h6>
         <p class="small"><strong>TVA : <span class="float-right"><?=$tva?>&euro;</span></strong></p>
         <h6 class="mt-5 border-top pt-3">Total : <span class="float-right"><?=$prixtotal?>&euro;</span></h6>
