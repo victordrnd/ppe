@@ -36,6 +36,24 @@ class Panier{
     }
   }
 
+
+  public function removeFromCart($productid){
+    if(isset($_SESSION['ProductsInCart'])){
+      $array = json_decode($_SESSION['ProductsInCart']);
+      $array = array_values(array_diff($array, array($productid)));
+      if(count($array) == 0){
+        unset($_SESSION['ProductsInCart']);
+        $_SESSION['NumberCart'] = 0;
+      }
+      else{
+        $_SESSION['NumberCart'] = count($array);
+        $_SESSION['ProductsInCart'] = json_encode($array);
+      }
+
+
+    }
+  }
+
 }
 
 ?>

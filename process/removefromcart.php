@@ -1,0 +1,7 @@
+<?php
+include '../includes/header.php';
+if(isset($_GET['productId'])){
+  $panier = new Panier;
+  $panier->removeFromCart($_GET['productId']);
+}
+ ?>

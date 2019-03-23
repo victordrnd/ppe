@@ -1,7 +1,6 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 $panier = new Panier;
-
 ?>
 <body>
   <h1 class="text-center mb-4">Votre panier</h1>
@@ -20,12 +19,15 @@ $panier = new Panier;
               <li class="list-group-item">
                 <div class="row">
                   <div class="col-3">
+
                     <img src="../assets/upload/produits/<?=$produit['ProductId']?>.png" class=" mt-4 mt-md-0 img-fluid w-25 mx-auto d-block"/>
                   </div>
                   <div class="col-6">
                     <p class="mt-4 text-center align-middle"><?=$produit['Productinfo']['PRODLibelle']?></p>
                   </div>
                   <div class="col-1 col-md-2">
+
+                    <span class="delete" id="<?=$produit['Productinfo']['PRODRef']?>"><i data-feather="trash" class="mr-5 text-warning"></i></span>
                     <input type="number" value="<?=$produit['number']?>" class="mt-4 form-groups border-0 w-50"/>
                   </div>
                   <div class="col-1">
@@ -72,7 +74,7 @@ $panier = new Panier;
         <div class="input-group">
           <input type="text" class="form-control border-0" placeholder="Code promo">
           <div class="input-group-append">
-            <button type="submit" class="btn btn-secondary">Appliquer</button>
+            <button type="submit" class="btn btn-warning">Appliquer</button>
           </div>
         </div>
       </form>
@@ -81,6 +83,19 @@ $panier = new Panier;
 
 
 </body>
+<script>
+$('.delete').click(function(){
+  $.ajax({
+    type: 'GET',
+    url: '../process/removefromcart.php',
+    data: {
+      'productId': this.id,
+    }
+  });
+  location.reload();
+})
+</script>
+
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';
 ?>
