@@ -37,6 +37,8 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
   </div>';
 }
 ?>
+
+
 <html>
 <title>StockPro</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -48,6 +50,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="https://unpkg.com/feather-icons"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="http://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2019-03-23/1ac13e0c008e7cdb8d3eaeb76ca87aa4.ico">
 <link href="https://fonts.googleapis.com/css?family=Audiowide|Orbitron:900" rel="stylesheet">
 <header>
   <ul class="nav shadow-sm p-3 " style="min-height:70px;">
