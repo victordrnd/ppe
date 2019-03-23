@@ -50,7 +50,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Audiowide|Orbitron:900" rel="stylesheet">
 <header>
-  <ul class="nav shadow-sm p-3 mb-5 " style="min-height:70px;">
+  <ul class="nav shadow-sm p-3 " style="min-height:70px;">
     <li class="nav-item d-none d-md-block">
       <a class="nav-link active text-dark" href="#"><i class="fab fa-mailchimp fa-2x"></i></a>
       </li

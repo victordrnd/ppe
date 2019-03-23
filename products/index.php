@@ -17,10 +17,11 @@ $infoconsole = $produit->getProduitByCat('CONS');
 $infoobjet = $produit->getProduitByCat('OBJETSCO');
 ?>
 
-<div>
-<h2  class="nav-link active color-dark h6 d-none d-md-block text-center display-4">TELEPHONIE</h2>
-  <div class="container-fluid">
-    <div class="row">
+
+<div class="bg-secondary">
+<h2  class="nav-link active text-white h6 d-none d-md-block text-center display-4">TELEPHONIE</h2>
+  <div class="container-fluid ">
+    <div class="row pb-4">
 
       <?php
       foreach($telinfo as $telephone){
@@ -54,7 +55,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 <div class="bg-dark">
   <h2  class="nav-link active color-dark h6 d-none d-md-block text-center display-4 text-white">IMAGE & SON</h2>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row pb-4">
       <?php
       foreach($infoson as $imageson){
         ?>
@@ -81,10 +82,10 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
   </div>
 </div>
 
-
-<h2  class="nav-link active color-dark h6 d-none d-md-block text-center display-4">INFORMATIQUE</h2>
+<div class="bg-secondary">
+<h2  class="nav-link active text-white h6 d-none d-md-block text-center display-4">INFORMATIQUE</h2>
 <div class="container-fluid">
-  <div class="row">
+  <div class="row pb-4">
 
     <?php
     foreach($infoinformatique as $informatique){
@@ -111,12 +112,13 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
     ?>
   </div>
 </div>
+</div>
 
 
 <div class="bg-dark">
   <h2  class="nav-link active color-dark h6 d-md-block text-center display-4 text-white display-4">JEUX VIDEO</h2>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row pb-4">
 
       <?php
       foreach($infoconsole as $console){
@@ -145,9 +147,10 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
   </div>
 </div>
 
-<h2  class="nav-link active color-dark h6 d-md-block text-center display-4">OBJETS CONNECTES</h2>
+<div class="bg-secondary">
+<h2  class="nav-link active text-white h6 d-md-block text-center display-4">OBJETS CONNECTES</h2>
 <div class="container-fluid">
-  <div class="row">
+  <div class="row pb-4">
 
     <?php
     foreach($infoobjet as $objet){
@@ -173,12 +176,13 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
     ?>
   </div>
 </div>
+</div>
 
 <div class="bg-dark">
   <h2  class="nav-link active color-dark h6 d-md-block text-center display-4 text-white">OCCASIONS</h2>
 
   <div class="container-fluid">
-    <div class="row">
+    <div class="row pb-4">
       <?php
       foreach($infooccasion as $occasion){
         ?>
