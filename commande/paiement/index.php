@@ -26,6 +26,10 @@ $tva = $prixtotal - $prixht;
             <div id="card-errors" role="alert" style="text-align:center;color:#fa755a !important" class="text-danger"></div>
             <button type="submit" name="submit" style="margin-left:auto;margin-right:auto;display:block;margin-bottom:20px;">Autoriser le paiement </button>
           </form>
+          <p class="text-center">ou payez avec Apple Pay</p>
+          <div class="apple-pay">
+            <a href="" class="btn btn-dark w-100 p-0"><i class="fab fa-apple-pay fa-2x"></i></a>
+          </div>
 
         </div>
       </div>
@@ -126,4 +130,6 @@ input:focus,
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
+
+
 </style>

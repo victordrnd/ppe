@@ -58,7 +58,7 @@
 }
 .feather{
   width:18px;
-  height:18px;
+  height:auto;
   margin-top:-3px;
 }
 
