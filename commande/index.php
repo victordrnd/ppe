@@ -4,7 +4,8 @@ if(isset($_POST['submit'])){
   $mail = htmlspecialchars($_POST['mail']);
   $password = $_POST['password'];
   $user = new Utilisateur;
-  $response = $user->connexion($mail,$password);
+  $url = 'commande/adresse';
+  $response = $user->connexion($mail,$password, $url);
   $display='d-block';
 }else{
   $response =NULL;

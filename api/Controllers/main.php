@@ -5,6 +5,7 @@ if(!isset($_SESSION['NumberCart'])){
 }
 
 if($url == '/commande/' && isset($_SESSION['id'])){
-    header('location:paiement');
+    header('location:adresse');
 }
+
 ?>

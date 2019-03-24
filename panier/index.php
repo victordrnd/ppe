@@ -29,7 +29,7 @@ $panier = new Panier;
                   <div class="col-1 col-md-2">
 
                     <span class="delete" id="<?=$produit['Productinfo']['PRODRef']?>"><i data-feather="trash" class="mr-5 text-warning"></i></span>
-                    <input type="number" value="<?=$produit['number']?>" class="mt-4 form-groups border-0 w-50"/>
+                    <input type="number" value="<?=$produit['number']?>" class="mt-4 form-groups border-0 w-25"/>
                   </div>
                   <div class="col-1">
                     <p class="mt-4 text-center ml-2 ml-md-0"><strong><?=$produit['Productinfo']['PRODPrix'] * $produit['number']?>&euro;</strong></p>

@@ -5,7 +5,7 @@ class Utilisateur
   public function __construct(){
     $this->bdd = new Crud;
   }
-  public function connexion($mail, $password){
+  public function connexion($mail, $password, $url=null){
     $password = hash('sha512', $password);
     $user = $this->bdd->select('client', '*', 'CLIMail='.tostring($mail));
     if(isset($user[0])){
@@ -20,7 +20,12 @@ class Utilisateur
       $_SESSION['nom'] = $user['CLINom'];
       $_SESSION['id'] = $user['CLIId'];
       $_SESSION['CLIVerif'] = $user['CLIVerif'];
-      header('location:../client/');
+      if($url != null){
+        header('location:../'.$url);
+      }
+      else{
+        header('location:../client/');
+      }
       return;
     }
     else{

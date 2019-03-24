@@ -1,5 +1,9 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
+if(!isset($_POST['ville'])){
+  exit;
+}
+
 $prixtotal = 0;
 $panier = new Panier;
 $panierinfo = $panier->getCart(true);
@@ -14,25 +18,34 @@ $tva = $prixtotal - $prixht;
     <div class="row">
 
 
-      <div class="col-12 col-md-8">
-        <div class="card shadow-small border-0 p-3">
-          <h2>Paiement</h2>
+        <div class="col-12 col-md-8">
 
-          <label class="small text-muted text-center mx-auto d-block">(code : 4242 4242 4242 4242 le reste peu importe )</label>
-          <form action="charge" method="post" class="mt-2" id="payment-form">
+          <div class="card shadow-small border-0 p-3">
+            <form action="charge.php" method="post" class="mt-2" id="payment-form">
+            <h2>Paiement</h2>
+
+            <label class="small text-muted text-center mx-auto d-block">(code : 4242 4242 4242 4242 le reste peu importe )</label>
+
             <div id="card-element" class="uk-box-shadow-medium" style="margin-left:auto;margin-right:auto;display:block;">
               <!-- A Stripe Element will be inserted here. -->
             </div>
             <div id="card-errors" role="alert" style="text-align:center;color:#fa755a !important" class="text-danger"></div>
             <button type="submit" name="submit" style="margin-left:auto;margin-right:auto;display:block;margin-bottom:20px;">Autoriser le paiement </button>
-          </form>
-          <p class="text-center">ou payez avec Apple Pay</p>
-          <div class="apple-pay">
-            <a href="" class="btn btn-dark w-100 p-0"><i class="fab fa-apple-pay fa-2x"></i></a>
-          </div>
+            <input type="hidden" name="ville" value="<?=$_POST['ville']?>"/>
+            <input type="hidden" name="zip" value="<?=$_POST['zip']?>"/>
+            <input type="hidden" name="adresse" value="<?=$_POST['adresse']?>"/>
 
+
+            <p class="text-center">ou payez avec Apple Pay</p>
+            <div class="apple-pay">
+              <button type="submit" class="btn btn-dark w-100 p-0"><i class="fab fa-apple-pay fa-2x"></i></button>
+
+            </div>
+
+          </div>
+          </form>
         </div>
-      </div>
+
 
       <div class="col-12 col-md-4">
         <h2>Récapitulatif</h2>
