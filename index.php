@@ -27,9 +27,9 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
         <div class="row">
 
-          <div class="col-md-6">
-            <div class="card mt-2 mt-md-4 border-0 shadow-small card-top">
-              <img id="menuImg" class="card-img-top w-75 card-height img-fluid mx-auto d-block" alt="..." src="assets/index/gghome1.png" onmouseover="onHover(this.id);" onmouseout="offHover(this.id);"/>
+          <div class="col-md-6 d-flex">
+            <div class="card mt-2 mt-md-4 border-0 shadow-small  flex-fill">
+              <img id="menuImg" class="card-img-top w-75 img-fluid mx-auto d-block" alt="..." src="assets/index/gghome1.png" onmouseover="onHover(this.id);" onmouseout="offHover(this.id);"/>
               <div class="card-block p-3">
                 <h5 class="card-title">Découvrez Google Home.</h5>
                 <p class="card-text">Google Home assistant vocal gris</p>
@@ -38,9 +38,9 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
             </div>
           </div>
 
-          <div class="col-md-6">
-            <div class="card mt-2 mt-md-4 border-0 shadow-small card-top">
-              <img class="card-img-top w-75 card-height img-fluid mx-auto d-block"  alt="..." src="assets/index/phamtom.png" />
+          <div class="col-md-6 d-flex">
+            <div class="card mt-2 mt-md-4 border-0 shadow-small  flex-fill">
+              <img class="card-img-top w-75 img-fluid mx-auto d-block"  alt="..." src="assets/index/phamtom.png" />
               <div class="card-block p-3">
                 <h5 class="card-title">Classic Phantom</h5>
                 <p class="card-text text-truncate">Ressentez la musique avec une puissance, une netteté et une clarté jamais atteintes.</p>
@@ -49,9 +49,9 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
             </div>
           </div>
 
-          <div class="col-md-6">
-            <div class="card mt-2 mt-md-4 border-0 shadow-small card-top">
-              <img id="menuImg" class="card-img-top w-75 card-height img-fluid mx-auto d-block" alt="..." src="assets/index/gghome1.png" onmouseover="onHover(this.id);" onmouseout="offHover(this.id);"/>
+          <div class="col-md-6 d-flex">
+            <div class="card mt-2 mt-md-4 border-0 shadow-small flex-fill">
+              <img id="menuImg" class="card-img-top w-75 img-fluid mx-auto d-block" alt="..." src="assets/index/gghome1.png" onmouseover="onHover(this.id);" onmouseout="offHover(this.id);"/>
               <div class="card-block p-3">
                 <h5 class="card-title">Découvrez Google Home.</h5>
                 <p class="card-text">Google Home assistant vocal gris</p>
@@ -59,9 +59,9 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card mt-2 mt-md-4 border-0 shadow-small card-top">
-              <img id="menuImg" class="card-img-top w-75 card-height img-fluid mx-auto d-block" alt="..." src="assets/index/gghome1.png" onmouseover="onHover(this.id);" onmouseout="offHover(this.id);"/>
+          <div class="col-md-6 d-flex">
+            <div class="card mt-2 mt-md-4 border-0 shadow-small flex-fill">
+              <img id="menuImg" class="card-img-top w-75  img-fluid mx-auto d-block" alt="..." src="assets/index/gghome1.png" onmouseover="onHover(this.id);" onmouseout="offHover(this.id);"/>
               <div class="card-block p-3">
                 <h5 class="card-title">Découvrez Google Home.</h5>
                 <p class="card-text">Google Home assistant vocal gris</p>
@@ -168,10 +168,9 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     <div class="row" >
       <div class="col-md-6">
         <div class="row">
-
-          <div class="col-md-6">
-            <div class="card border-0 shadow-small mt-5 card-height2">
-              <div class="card border-0 text-center">
+          <div class="col-md-6 d-flex">
+            <div class="card border-0 shadow-small mt-5 flex-fill">
+              <div class="text-center">
                 <div class="card-body">
                   <img class="w-75" src="assets/index/mavicpro.png" alt="">
                   <h5 class="card-title mt-2">Mavic Pro 2</h5>
@@ -181,9 +180,9 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
             </div>
           </div>
 
-          <div class="col-md-6 ">
-            <div class="card border-0 shadow-small mt-5 card-height2">
-              <div class="card border-0 text-center">
+          <div class="col-md-6 d-flex">
+            <div class="card border-0 shadow-small mt-5 flex-fill">
+              <div class="text-center">
                 <div class="card-body">
                   <img class="w-50 " src="assets/index/applew.png" alt="">
                   <h5 class="card-title mt-2">Apple Watch 4</h5>
@@ -194,9 +193,9 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
               </div>
             </div>
 
-            <div class="col-md-6">
-              <div class="card border-0 shadow-small mt-5 card-height2">
-                <div class="card border-0 text-center">
+            <div class="col-md-6 d-flex">
+              <div class="card border-0 shadow-small mt-5 flex-fill">
+                <div class="text-center">
                   <div class="card-body">
                     <img class="w-50 " src="assets/index/matex.png" alt="">
                     <h5 class="card-title mt-2">Huawei Mate X</h5>
@@ -206,9 +205,9 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
               </div>
             </div>
 
-            <div class="col-md-6">
-              <div class="card border-0 shadow-small mt-5 card-height2">
-                <div class="card border-0 text-center">
+            <div class="col-md-6 d-flex">
+              <div class="card border-0 shadow-small mt-5 flex-fill">
+                <div class="text-center">
                   <div class="card-body">
                     <img class="w-75 " src="assets/index/xps.png" alt="">
                     <h5 class="card-title mt-2">Ultrabook Dell XPS 13"</h5>

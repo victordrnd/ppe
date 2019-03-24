@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
       <div class="card-body">
         <h5 class="card-title">Connexion</h5>
         <svg style="display:block;margin-left:auto;margin-right:auto;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width:"70px" height="70px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-          <g><path d="M500,10C231.5,10,10,231.5,10,500s221.5,490,490,490s490-221.5,490-490S768.5,10,500,10z M795.3,835.6c0-134.2-100.7-248.4-221.5-281.9c73.8-26.8,120.8-100.7,120.8-181.2c0-107.4-87.3-194.7-194.7-194.7s-194.7,87.3-194.7,194.7c0,80.5,53.7,154.4,120.8,181.2c-127.5,33.6-221.5,147.7-221.5,281.9C110.7,755.1,50.3,634.2,50.3,500C50.3,251.6,251.6,50.3,500,50.3c248.4,0,449.7,201.4,449.7,449.7C949.7,634.2,889.3,755.1,795.3,835.6z" fill="#007bff"/></g>
+          <g><path d="M500,10C231.5,10,10,231.5,10,500s221.5,490,490,490s490-221.5,490-490S768.5,10,500,10z M795.3,835.6c0-134.2-100.7-248.4-221.5-281.9c73.8-26.8,120.8-100.7,120.8-181.2c0-107.4-87.3-194.7-194.7-194.7s-194.7,87.3-194.7,194.7c0,80.5,53.7,154.4,120.8,181.2c-127.5,33.6-221.5,147.7-221.5,281.9C110.7,755.1,50.3,634.2,50.3,500C50.3,251.6,251.6,50.3,500,50.3c248.4,0,449.7,201.4,449.7,449.7C949.7,634.2,889.3,755.1,795.3,835.6z" fill="#ffc107"/></g>
         </svg>
         <form action="" method="POST">
           <div class="form-group">
@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
             <input type="checkbox" class="form-check-input" >
             <label class="form-check-label" >Se souvenir de moi</label>
           </div>
-          <button type="submit" name="submit" class="btn btn-primary width-1">Se connecter</button>
+          <button type="submit" name="submit" class="btn btn-warning width-1">Se connecter</button>
         </form>
       </div>
     </div>

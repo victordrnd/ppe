@@ -70,7 +70,7 @@ $panier = new Panier;
         <p class="small"><strong>TVA : <span class="float-right"><?=$tva?>&euro;</span></strong></p>
         <h6 class="mt-5 border-top pt-3">Total : <span class="float-right"><?=$prixtotal?>&euro;</span></h6>
       </div>
-      <form class="card p-0 mt-5 border-0 shadow-small">
+      <form class="card p-0 mt-5 border-0 shadow-small w-100">
         <div class="input-group">
           <input type="text" class="form-control border-0" placeholder="Code promo">
           <div class="input-group-append">
@@ -78,6 +78,9 @@ $panier = new Panier;
           </div>
         </div>
       </form>
+      <div class="mt-5">
+        <button class="btn btn-warning w-100">Passer Commande <i data-feather="shopping-bag"></i></button>
+      </div>
     </div>
   </div>
 
