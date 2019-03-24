@@ -1,5 +1,7 @@
 <?php
 class Panier{
+
+
   public function addToCart($productid){
     if(isset($_SESSION['ProductsInCart'])){
       $array = json_decode($_SESSION['ProductsInCart']);

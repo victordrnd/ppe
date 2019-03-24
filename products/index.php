@@ -1,10 +1,9 @@
 <?php
-header('Content-type: text/html; charset=ISO-8859-1');
 $root = '';
 include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 $produit = new Produit;
-$telinfo = $produit->getProduitByCat('TEL');
+$telinfo = $produit->getProduitByCat('TEL', 8);
 
 $infooccasion = $produit->getProduitByCat('OCCAS');
 
@@ -18,18 +17,18 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 ?>
 
 
-<div class="bg-secondary">
-<h2  class="nav-link active text-white h6 d-none d-md-block text-center display-4">TELEPHONIE</h2>
+<div class="">
+<h2  class="nav-link active d-md-block text-center display-4">TELEPHONIE</h2>
   <div class="container-fluid ">
     <div class="row pb-4">
 
       <?php
       foreach($telinfo as $telephone){
         ?>
-        <div class="col-sm-1 col-md-3">
-          <div class="card border-0 shadow-small mt-3" >
+        <div class="col-sm-1 col-md-3 d-flex">
+          <div class="card border-0 shadow-small mt-3 flex-fill">
             <div class="card-img-top">
-              <img src="../assets/upload/produits/<?=$telephone['PRODRef']?>.png" class="d-block mx-auto w-50" alt="">
+              <img src="../assets/upload/produits/<?=$telephone['PRODRef']?>.png" class="d-block mx-auto w-50 mt-1" alt="">
             </div>
 
             <div class="card-body">
@@ -52,8 +51,8 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
   </div>
 </div>
 
-<div class="bg-dark">
-  <h2  class="nav-link active color-dark h6 d-none d-md-block text-center display-4 text-white">IMAGE & SON</h2>
+<div >
+  <h2  class="nav-link active h6 d-none d-md-block text-center display-4">IMAGE & SON</h2>
   <div class="container-fluid">
     <div class="row pb-4">
       <?php
@@ -82,8 +81,8 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
   </div>
 </div>
 
-<div class="bg-secondary">
-<h2  class="nav-link active text-white h6 d-none d-md-block text-center display-4">INFORMATIQUE</h2>
+<div >
+<h2  class="nav-link active  h6 d-none d-md-block text-center display-4">INFORMATIQUE</h2>
 <div class="container-fluid">
   <div class="row pb-4">
 
@@ -115,8 +114,8 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 </div>
 
 
-<div class="bg-dark">
-  <h2  class="nav-link active color-dark h6 d-md-block text-center display-4 text-white display-4">JEUX VIDEO</h2>
+<div>
+  <h2  class="nav-link active color-dark h6 d-md-block text-center display-4  display-4">JEUX VIDEO</h2>
   <div class="container-fluid">
     <div class="row pb-4">
 
@@ -147,8 +146,8 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
   </div>
 </div>
 
-<div class="bg-secondary">
-<h2  class="nav-link active text-white h6 d-md-block text-center display-4">OBJETS CONNECTES</h2>
+<div >
+<h2  class="nav-link active  h6 d-md-block text-center display-4">OBJETS CONNECTES</h2>
 <div class="container-fluid">
   <div class="row pb-4">
 
@@ -178,16 +177,16 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 </div>
 </div>
 
-<div class="bg-dark">
-  <h2  class="nav-link active color-dark h6 d-md-block text-center display-4 text-white">OCCASIONS</h2>
+<div >
+  <h2  class="nav-link active color-dark h6 d-md-block text-center display-4 ">OCCASIONS</h2>
 
   <div class="container-fluid">
     <div class="row pb-4">
       <?php
       foreach($infooccasion as $occasion){
         ?>
-        <div class="col-sm-1 col-md-3">
-          <div class="card border-0 shadow-small mt-3" >
+        <div class="col-sm-1 col-md-3 d-flex">
+          <div class="card border-0 shadow-small mt-3 flex-fill">
             <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h6 class="card-title"><?= $occasion["PRODLibelle"]?></h6>

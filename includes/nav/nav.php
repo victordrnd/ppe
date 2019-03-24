@@ -1,17 +1,10 @@
 <?php
 if(isset($_SESSION['id'])){
-  $right = '<div class="ml-auto mr-4 d-none d-md-block">
-  <div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="inbox"></i>
-  '.$_SESSION['nom'].' '.$_SESSION['prenom'].'
-  </a>
-  <div class="dropdown-menu border-0 shadow-small" aria-labelledby="dropdownMenuLink" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-  <a class="dropdown-item" href="'.ROOTDIR.'client"><i data-feather="bookmark"></i> Espace Membre</a>
-  <a class="dropdown-item" href="'.ROOTDIR.'client/"><i data-feather="bell"></i> Mes réservations</a>
-  <a class="dropdown-item" href="'.ROOTDIR.'client/process/logout.php"><i data-feather="power"></i> Déconnexion</a>
-  </div>
-  </div>
-  </div>';
+  $right = '
+  <li class="nav-item col-1 ml-auto d-none d-md-block"><a class="nav-link active text-dark mt-0 d-none d-md-block" href="'.ROOTDIR.'panier/"><i class="fas fa-shopping-cart"></i> <span class="badge badge-warning" id="numberInCart">'.$_SESSION['NumberCart'].'</span></a></li>
+  <li class= rounded  d-none d-md-block text-dark" style="max-width:160px;text-align:center;">
+  <a class="nav-link active color-dark h6 d-none d-md-block btn btn-warning " href="'.ROOTDIR.'client/" style="background-color:#ffc107;border:0"><i data-feather="user"></i> '.$_SESSION['nom'].' '.$_SESSION['prenom'].'</a>
+  </li>';
 }
 else{
   $right = '
@@ -21,21 +14,7 @@ else{
   </li>
   <a class="nav-link shadow-sm ml-3  h6 bg-white rounded  d-none d-md-block" href="'.ROOTDIR.'connexion/">CONNEXION</a>';
 }
-if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVerif'] == 0) ){
-  $right = '<div class="ml-auto mr-4 d-none d-md-block">
-  <div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="inbox"></i>
-  '.$_SESSION['nom'].' '.$_SESSION['prenom'].' <span class="badge badge-pill badge-warning text-white"><i class="fas fa-exclamation"></i></span>
-  </a>
-  <div class="dropdown-menu border-0 shadow-small" aria-labelledby="dropdownMenuLink" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-  <span class="small p-3 text-center text-warning">Pensez à vérifier votre mail</span>
-  <a class="dropdown-item" href="'.ROOTDIR.'client"><i data-feather="bookmark"></i> Espace Membre</a>
-  <a class="dropdown-item" href="'.ROOTDIR.'client/"><i data-feather="bell"></i> Mes réservations</a>
-  <a class="dropdown-item" href="'.ROOTDIR.'client/process/logout.php"><i data-feather="power"></i> Déconnexion</a>
-  </div>
-  </div>
-  </div>';
-}
+
 ?>
 
 
@@ -47,7 +26,7 @@ if(isset($_SESSION['id']) && (!isset($_SESSION['CLIVerif']) || $_SESSION['CLIVer
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
 <script src="https://unpkg.com/feather-icons"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="http://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2019-03-23/1ac13e0c008e7cdb8d3eaeb76ca87aa4.ico">

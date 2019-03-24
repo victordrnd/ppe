@@ -13,6 +13,7 @@ $panier = new Panier;
           if(!empty($panier->getCart(true))){
             $productlist = $panier->getCart(true);
             $prixtotal = 0;
+            $display = 'd-block';
             foreach($productlist as $produit){
               $prixtotal += $produit['Productinfo']['PRODPrix'] * $produit['number'];
               ?>
@@ -44,6 +45,7 @@ $panier = new Panier;
             $prixht = 0;
             $tva = 0;
             $prixtotal = 0;
+            $display = 'd-none';
             ?>
             <li class="list-group-item">
               <div class="row text-center">
@@ -79,7 +81,7 @@ $panier = new Panier;
         </div>
       </form>
       <div class="mt-5">
-        <button class="btn btn-warning w-100">Passer Commande <i data-feather="shopping-bag"></i></button>
+        <a class="btn btn-warning w-100 <?=$display?>" href="../commande">Passer Commande <i data-feather="shopping-bag"></i></a>
       </div>
     </div>
   </div>

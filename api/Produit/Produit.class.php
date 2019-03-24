@@ -26,8 +26,14 @@ class Produit{
 
     return $produitinfo;
   }
-  public function getProduitByCat($catcode){
-    $produitinfo = $this->bdd->select('produit','*', 'PRODCatCode='.tostring($catcode));
+  public function getProduitByCat($catcode, $number = null){
+    if($number == null){
+      $produitinfo = $this->bdd->select('produit','*', 'PRODCatCode='.tostring($catcode));
+    }
+    else{
+      $produitinfo = $this->bdd->select('produit','*', 'PRODCatCode='.tostring($catcode).' LIMIT '.$number);
+    }
+
     return $produitinfo;
   }
 
