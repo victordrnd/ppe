@@ -4,7 +4,6 @@ class Commande{
   private $bdd;
 
   public $comref;
-  public $comdate;
   public $comprix;
   public $comcliid;
   public $comstatus = 'En traitement';
@@ -15,7 +14,9 @@ class Commande{
   }
 
   public function save(){
-    $array = array(tostring($comref), tostring($comdate), tostring($comprix), tostring($comstatus), tostring($comcliid));
+    $date = date('Y-m-d');
+    echo $date;
+    $array = array(tostring($this->comref),"('".$date."')", tostring($this->comprix), tostring($this->comstatus), tostring($this->comcliid));
     $rows = "COMRef, COMDate, COMPrix, COMStatus, COMCliId";
     $this->bdd->insert('commande', $array, $rows);
   }

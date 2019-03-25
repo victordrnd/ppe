@@ -1,9 +1,9 @@
 <?php
 
 class LigneCommande{
-  public $LPprodref;
-  public $LPprodqte;
-  public $LPcomref;
+  public $LCprodref;
+  public $LCprodqte;
+  public $LCcomref;
   private $bdd;
 
   public function __construct(){
@@ -11,8 +11,9 @@ class LigneCommande{
   }
 
   public function save(){
-
-    $this->bdd->insert('lignecommande');
+    $rows = "LIGNProdCode, LIGNComRef, LIGNQte";
+    $array = array(tostring($this->LCprodref), tostring($this->LCcomref), $this->LCprodqte);
+    $this->bdd->insert('lignecommande', $array, $rows);
   }
 }
  ?>
