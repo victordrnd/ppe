@@ -1,10 +1,11 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
-if(isset($_POST['ville'])){
+session_start();
+include $_SERVER['DOCUMENT_ROOT'].'/api/autoload.php';
+if(isset($_POST['ville']) && !empty($_SESSION['ProductsInCart'])){
   $panier = new Panier;
   $commande = new Commande;
 
-  var_dump($panier->getCart(true));
+  //var_dump($panier->getCart(true));
   $comref = md5(uniqid(rand(), true));
   $prixtotal = 0;
 
@@ -26,9 +27,9 @@ if(isset($_POST['ville'])){
     $lignecommande->LCcomref = $comref;
     $lignecommande->save();
   }
-  unset($_SESSION['ProductInCart']);
+  unset($_SESSION['ProductsInCart']);
   unset($_SESSION['NumberCart']);
-  echo '<meta http-equiv="refresh" content="0;URL=success.php">';
+  header('location:success.php?token='.$comref);
 
 
 }

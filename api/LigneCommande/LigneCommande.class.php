@@ -15,5 +15,10 @@ class LigneCommande{
     $array = array(tostring($this->LCprodref), tostring($this->LCcomref), $this->LCprodqte);
     $this->bdd->insert('lignecommande', $array, $rows);
   }
+
+  public function getAll($comref){
+    $lignescommande = $this->bdd->select('lignecommande', '*', 'LIGNComRef='.tostring($comref));
+    return $lignescommande;
+  }
 }
  ?>

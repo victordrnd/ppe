@@ -75,6 +75,9 @@ CREATE TABLE `commande` (
   `COMDate` date DEFAULT NULL,
   `COMPrix` varchar(255) DEFAULT NULL,
   `COMStatus` varchar(255) DEFAULT NULL,
+  `COMVille` varchar(100) DEFAULT NULL,
+  `COMCP` INT DEFAULT NULL,
+  `COMAdresse` varchar(255) DEFAULT NULL,
   `COMCliId` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -87,7 +90,7 @@ CREATE TABLE `commande` (
 CREATE TABLE `lignecommande` (
   `LIGNProdCode` varchar(32) NOT NULL,
   `LIGNComRef` varchar(32) NOT NULL,
-  `LIGNQuantité` varchar(255) DEFAULT NULL
+  `LIGNQte` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

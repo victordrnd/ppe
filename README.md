@@ -20,11 +20,5 @@
 
 ## To Do List
 
-- Faire la page d'accueil
-- Faire la classe Panier
-- Faire la page produit
-- Faire le panel utilisateur
-- Remplir la base de donnée d'informations
-- Faire la page Panier
-- Faire le processus d'inscription
-- catégories(INFORMATIQUE, IMAGE & SON,TELEPHONIE & AUTO, OBJETS CONNECTES, JEUX VIDEO, RECONDITIONNÉ & OCCASION)
+- Faire la page d'un produit spécifique
+- Ajouter COMVille, COMCP, COMAdresse à la table commande 

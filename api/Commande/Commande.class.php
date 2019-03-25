@@ -15,10 +15,25 @@ class Commande{
 
   public function save(){
     $date = date('Y-m-d');
-    echo $date;
     $array = array(tostring($this->comref),"('".$date."')", tostring($this->comprix), tostring($this->comstatus), tostring($this->comcliid));
     $rows = "COMRef, COMDate, COMPrix, COMStatus, COMCliId";
     $this->bdd->insert('commande', $array, $rows);
+  }
+
+  public function getInfo($comref, $moreinfo = null){
+    $commande = $this->bdd->select('commande', '*', 'COMRef='.tostring($comref));
+    if($moreinfo!=null){
+      $ligne = new LigneCommande;
+      $lignescommande = $ligne->getAll($comref);
+      //var_dump($lignescommande);
+      $commande['Products'] = $lignescommande;
+      $produit = new Produit;
+      foreach($lignescommande as $index => $product){
+        $productinfo = $produit->getProduitById($product['LIGNProdCode']);
+        $commande['Products'][$index][0] = $productinfo[0];
+      }
+    }
+    return $commande;
   }
 }
 
