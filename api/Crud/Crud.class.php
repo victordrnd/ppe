@@ -30,7 +30,7 @@ class Crud extends Database
     }
     $value = implode(',',$value);
     $query.= ' VALUES ('.$value.')';
-    echo $query;
+    //echo $query;
     return $this->query($query);
   }
   //->delete('user', 'id=1');

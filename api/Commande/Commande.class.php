@@ -35,6 +35,17 @@ class Commande{
     }
     return $commande;
   }
+
+
+  public function getByUser($userid, $limit=null){
+    if($limit != null){
+      return $this->bdd->select('commande', '*', 'COMCliId='.tostring($userid).' LIMIT '.$limit);
+    }
+    else{
+      return $this->bdd->select('commande', '*', 'COMCliId='.tostring($userid));
+    }
+
+  }
 }
 
 
