@@ -27,6 +27,13 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
         ?>
         <div class="col-sm-1 col-md-3 d-flex">
           <div class="card border-0 shadow-small mt-3 flex-fill">
+            <div class="row m-2">
+              <div class="offset-10 col-2">
+                <span class="badge badge-secondary float-right">Dispo</span>
+              </div>
+            </div>
+
+
             <div class="card-img-top">
               <img src="../assets/upload/produits/<?=$telephone['PRODRef']?>.png" class="d-block mx-auto w-50 mt-1" alt="">
             </div>
@@ -59,9 +66,9 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
       foreach($infoson as $imageson){
         ?>
 
-        <div class="col-sm-1 col-md-3">
-          <div class="card border-0 shadow-small mt-3" >
-            <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
+        <div class="col-sm-1 col-md-3 d-flex">
+          <div class="card border-0 shadow-small mt-3 flex-fill" >
+            <img src="../assets/upload/produits/<?=$imageson['PRODRef']?>.png" class="d-block mx-auto w-50 mt-1" alt="">
             <div class="card-body">
               <h6 class="card-title"><?=$imageson["PRODLibelle"]?></h6>
               <p class="text-muted small text-truncate"><?=$imageson["PRODDesc"] ?></p>

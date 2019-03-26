@@ -21,7 +21,7 @@ $panier = new Panier;
                 <div class="row">
                   <div class="col-3">
 
-                    <img src="../assets/upload/produits/<?=$produit['ProductId']?>.png" class=" mt-4 mt-md-0 img-fluid w-25 mx-auto d-block"/>
+                    <img src="../assets/upload/produits/<?=$produit['ProductId']?>.png" class="mt-4 my-auto img-fluid w-25 mx-auto d-block"/>
                   </div>
                   <div class="col-6">
                     <p class="mt-4 text-center align-middle"><?=$produit['Productinfo']['PRODLibelle']?></p>
@@ -29,7 +29,7 @@ $panier = new Panier;
                   <div class="col-1 col-md-2">
 
                     <span class="delete" id="<?=$produit['Productinfo']['PRODRef']?>"><i data-feather="trash" class="mr-5 text-warning"></i></span>
-                    <input type="number" value="<?=$produit['number']?>" class="mt-4 form-groups border-0 w-25"/>
+                    <input type="number" value="<?=$produit['number']?>" min="1" class="mt-4 form-groups border-0 w-25"/>
                   </div>
                   <div class="col-1">
                     <p class="mt-4 text-center ml-2 ml-md-0"><strong><?=$produit['Productinfo']['PRODPrix'] * $produit['number']?>&euro;</strong></p>

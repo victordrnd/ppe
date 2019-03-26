@@ -15,7 +15,7 @@ $commandeinfo = $commande->getInfo(htmlspecialchars($_GET['token']), true);
           <h5 class="text-center"></h5>
           <ul class="list-group list-group-flush mt-5">
             <?php
-            foreach($commandeinfo['Products'] as $index => $produit){
+            foreach($commandeinfo['Products'] as $produit){
               ?>
               <li class="list-group-item">
                 <div class="row">

@@ -14,7 +14,7 @@ $commandelist = $commande->getByUser($_SESSION['id'], 6);
 
         <div class="row mt-5">
           <div class="col-12">
-            <table class="table table-borderless w-100 text-center table-hover">
+            <table class="table table-borderless w-100 text-center table-hover table-responsive-md">
               <thead>
                 <tr>
                   <th scope="col-4 text-center">#</th>
@@ -29,7 +29,7 @@ $commandelist = $commande->getByUser($_SESSION['id'], 6);
                 foreach($commandelist as $commande){
                   $number++;
                   ?>
-                  <tr>
+                  <tr id="<?=$commande['COMRef']?>" class="tr">
                     <th class="text-center" scope="row"><?=substr($commande['COMRef'], 0, 8)?></th>
                     <td><?=$commande['COMDate']?></td>
                     <td><?=$commande['COMPrix']?> €</td>
@@ -63,7 +63,12 @@ $commandelist = $commande->getByUser($_SESSION['id'], 6);
 
     </div>
   </body>
+<script>
 
+$('.tr').click(function(){
+  window.location.href='commande/?id='+this.id;
+})
+</script>
   <?php
   include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';
   ?>
