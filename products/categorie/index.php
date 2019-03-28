@@ -16,15 +16,16 @@ if(isset($_GET['categorie'])) {
 else{
   exit;
 }
-  ?>
+?>
+<body>
 
   <div class="">
-  <h2  class="nav-link active d-md-block text-center display-4"><?= $catlibelle ?></h></h2>
+    <h2  class="nav-link active d-md-block text-center display-4"><?= $catlibelle ?></h></h2>
     <div class="container-fluid ">
       <div class="row pb-4">
 
         <?php
-        
+
         foreach($info as $chaqueproduit){
           ?>
           <div class="col-sm-1 col-md-3 d-flex">
@@ -53,9 +54,29 @@ else{
             </div>
           </div>
           <?php
-             }
-          ?>
+        }
+        ?>
 
       </div>
     </div>
   </div>
+</body>
+
+<script>
+
+<script>
+$('.addtocart').click(function(){
+  $.ajax({
+    type: 'GET',
+    url: '../../process/addtocart.php',
+    data: {
+      'productId': this.id,
+    }
+  });
+  var numberinCart = $('#numberInCart').html();
+  $('#numberInCart').html(parseInt($('#numberInCart').html()) + 1);
+})
+
+
+</script>
+</script>

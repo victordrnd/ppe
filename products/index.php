@@ -60,7 +60,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 
 <div class="row">
   <div class="col my-4">
-    <a href="" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus de téléphones</a>
+    <a href="categorie/?categorie=TEL" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus de téléphones</a>
   </div>
 </div>
 
