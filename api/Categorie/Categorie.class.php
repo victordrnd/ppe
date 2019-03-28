@@ -9,5 +9,7 @@ class Categorie
   public function getCategorieById($catid){
     return $this->bdd->select('categorie', '*','CATCode='.tostring($catid));
   }
+
+  
 }
 ?>
