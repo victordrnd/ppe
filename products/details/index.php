@@ -71,7 +71,7 @@ $produitinfo = $produit->getProduitById($_GET['ProduitId']);
           </div>
         </div>
         <div class="card border-0 shadow-small p-3 mt-5">
-          <h4>Luc Ratif <span class="text-warning float-right"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></h4>
+          <h4>Jean Venime <span class="text-warning float-right"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></h4>
           <div class="comment">
             <h5>Bon produit</h5>
             <p class="lead"> Bon produit en soit, je regrette quand même de ne pas avoir attendu les soldes car 1 semaine plus tard il était 35% moins cher. il faut aussi savoir que la concurrence est au même pied d'égalité et souvent moins cher</p>
