@@ -5,15 +5,15 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 $produit = new Produit;
 $telinfo = $produit->getProduitByCat('TEL', 8);
 
-$infooccasion = $produit->getProduitByCat('OCCAS');
+$infooccasion = $produit->getProduitByCat('OCCAS', 8);
 
-$infoson = $produit->getProduitByCat('IMAGESON');
+$infoson = $produit->getProduitByCat('IMAGESON', 8);
 
-$infoinformatique = $produit->getProduitByCat('INFORMATIQUE');
+$infoinformatique = $produit->getProduitByCat('INFORMATIQUE', 8);
 
-$infoconsole = $produit->getProduitByCat('CONS');
+$infoconsole = $produit->getProduitByCat('CONS', 8);
 
-$infoobjet = $produit->getProduitByCat('OBJETSCO');
+$infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
 ?>
 
 
@@ -58,11 +58,13 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
   </div>
 </div>
 
-<div class="row">
+<div class="row ">
   <div class="col my-4">
     <a href="categorie/?categorie=TEL" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus de téléphones</a>
   </div>
 </div>
+
+<div class="row border-bottom border-warning w-50 d-block mx-auto"></div>
 
 
 <div>
@@ -97,9 +99,11 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 
 <div class="row">
   <div class="col my-4">
-    <a href="categorie/?categorie=TEL" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus</a>
+    <a href="categorie/?categorie=IMAGESON" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus de produits</a>
   </div>
 </div>
+
+<div class="row border-bottom border-warning w-50 d-block mx-auto"></div>
 
 <div >
   <h2  class="nav-link active  h6 d-none d-md-block text-center display-4">INFORMATIQUE</h2>
@@ -112,7 +116,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 
         <div class="col-sm-1 col-md-3">
           <div class="card border-0 shadow-small mt-3" >
-            <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
+            <img src="../assets/upload/produits/<?=$informatique['PRODRef']?>.png" class="card-img-top" alt="">
             <div class="card-body">
               <h6 class="card-title"><?=$informatique["PRODLibelle"]?></h6>
               <p class="text-muted small text-truncate"><?=$informatique["PRODDesc"] ?></p>
@@ -132,11 +136,14 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
     </div>
   </div>
 </div>
-<div class="row">
+
+
   <div class="col my-4">
-    <a href="categorie/?categorie=TEL" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus</a>
-  </div>
+    <a href="categorie/?categorie=INFORMATIQUE" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus de produits</a>
+
 </div>
+
+<div class="row border-bottom border-warning w-50 d-block mx-auto"></div>
 
 <div>
   <h2  class="nav-link active color-dark h6 d-md-block text-center display-4  display-4">JEUX VIDEO</h2>
@@ -149,7 +156,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 
         <div class="col-sm-1 col-md-3">
           <div class="card border-0 shadow-small mt-3" >
-            <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
+            <img src="../assets/upload/produits/<?=$console['PRODRef']?>.png" class="card-img-top" alt="">
             <div class="card-body">
               <h6 class="card-title"><?= $console["PRODLibelle"]?></h6>
               <p class="text-muted small text-truncate"><?=$console["PRODDesc"] ?></p>
@@ -172,9 +179,11 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 
 <div class="row">
   <div class="col my-4">
-    <a href="categorie/?categorie=TEL" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus</a>
+    <a href="categorie/?categorie=CONS" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus de produits</a>
   </div>
 </div>
+
+<div class="row border-bottom border-warning w-50 d-block mx-auto"></div>
 
 
 <div >
@@ -188,7 +197,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 
         <div class="col-sm-1 col-md-3">
           <div class="card border-0 shadow-small mt-3" >
-            <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
+            <img src="../assets/upload/produits/<?=$objet['PRODRef']?>.png" class="card-img-top" alt="">
             <div class="card-body">
               <h6 class="card-title"><?= $objet["PRODLibelle"]?></h6>
               <p class="text-muted small text-truncate"><?=$objet["PRODDesc"] ?></p>
@@ -210,12 +219,14 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 
 <div class="row">
   <div class="col my-4">
-    <a href="categorie/?categorie=TEL" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus d'objets connectés</a>
+    <a href="categorie/?categorie=OBJETSCO" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus d'objets connectés</a>
   </div>
 </div>
 
+<div class="row border-bottom border-warning w-50 d-block mx-auto"></div>
+
 <div >
-  <h2  class="nav-link active color-dark h6 d-md-block text-center display-4 ">OCCASIONS</h2>
+  <h2  class="nav-link active color-dark h6 d-md-block text-center display-4 ">RECONDITIONNE</h2>
 
   <div class="container-fluid">
     <div class="row pb-4">
@@ -224,7 +235,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
         ?>
         <div class="col-sm-1 col-md-3 d-flex">
           <div class="card border-0 shadow-small mt-3 flex-fill">
-            <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
+            <img src="../assets/upload/produits/<?=$occasion['PRODRef']?>.png" class="card-img-top" alt="">
             <div class="card-body">
               <h6 class="card-title"><?= $occasion["PRODLibelle"]?></h6>
               <p class="text-muted small text-truncate"><?=$occasion["PRODDesc"] ?></p>
@@ -244,11 +255,13 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
   </div>
 </div>
 
-<div class="row">
+<div class="row ">
   <div class="col my-4">
-    <a href="categorie/?categorie=TEL" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus d'occasions'</a>
+    <a href="categorie/?categorie=OCCAS" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus d'occasions</a>
   </div>
 </div>
+
+<div class="row border-bottom border-warning w-50 d-block mx-auto"></div>
 
 <script>
 $('.addtocart').click(function(){

@@ -62,6 +62,10 @@ else{
   </div>
 </body>
 
+<?php
+  include  $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';
+ ?>
+
 
 <script>
 $('.addtocart').click(function(){
