@@ -39,7 +39,7 @@ if(isset($_POST['coupon'])){
                   </div>
                   <div class="col-1 col-md-2">
 
-                    <span class="delete" id="<?=$produit['Productinfo']['PRODRef']?>"><i data-feather="trash" class="mr-5 text-warning"></i></span>
+                    <span class="delete" id="<?=$produit['Productinfo']['PRODRef']?>" style="cursor:pointer"><i data-feather="trash" class="mr-5 text-warning"></i></span>
                     <input type="number" value="<?=$produit['number']?>" min="1" class="mt-4 form-groups border-0 w-25"/>
                   </div>
                   <div class="col-1">
