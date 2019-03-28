@@ -13,10 +13,16 @@ if(isset($_POST['ville']) && !empty($_SESSION['ProductsInCart'])){
   foreach ($panier->getCart(true) as $lignepanier) {
     $prixtotal += $lignepanier['Productinfo']['PRODPrix'] * $lignepanier['number'];
   }
+  if(isset($_SESSION['COUPONCode'])){
+    $prixtotal *= (1 - ($_SESSION['COUPONReduction'] / 100));
+  }
   //on sauvegarde la commande
   $commande->comref = $comref;
   $commande->comprix = $prixtotal;
   $commande->comcliid = $_SESSION['id'];
+  $commande->comville = htmlspecialchars($_POST['ville']);
+  $commande->comcp = htmlspecialchars($_POST['zip']);
+  $commande->comadresse = htmlspecialchars($_POST['adresse']);
   $commande->save();
 
 
@@ -27,6 +33,8 @@ if(isset($_POST['ville']) && !empty($_SESSION['ProductsInCart'])){
     $lignecommande->LCcomref = $comref;
     $lignecommande->save();
   }
+  unset($_SESSION['COUPONCode']);
+  unset($_SESSION['COUPONReduction']);
   unset($_SESSION['ProductsInCart']);
   unset($_SESSION['NumberCart']);
   header('location:success.php?token='.$comref);

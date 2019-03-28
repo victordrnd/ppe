@@ -18,7 +18,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
 
 
 <div class="">
-<h2  class="nav-link active d-md-block text-center display-4">TELEPHONIE</h2>
+  <h2  class="nav-link active d-md-block text-center display-4">TELEPHONIE</h2>
   <div class="container-fluid ">
     <div class="row pb-4">
 
@@ -58,7 +58,14 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
   </div>
 </div>
 
-<div >
+<div class="row">
+  <div class="col my-4">
+    <a href="" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus de téléphones</a>
+  </div>
+</div>
+
+
+<div>
   <h2  class="nav-link active h6 d-none d-md-block text-center display-4">IMAGE & SON</h2>
   <div class="container-fluid">
     <div class="row pb-4">
@@ -88,38 +95,48 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
   </div>
 </div>
 
+<div class="row">
+  <div class="col my-4">
+    <a href="" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus</a>
+  </div>
+</div>
+
 <div >
-<h2  class="nav-link active  h6 d-none d-md-block text-center display-4">INFORMATIQUE</h2>
-<div class="container-fluid">
-  <div class="row pb-4">
+  <h2  class="nav-link active  h6 d-none d-md-block text-center display-4">INFORMATIQUE</h2>
+  <div class="container-fluid">
+    <div class="row pb-4">
 
-    <?php
-    foreach($infoinformatique as $informatique){
-      ?>
+      <?php
+      foreach($infoinformatique as $informatique){
+        ?>
 
-      <div class="col-sm-1 col-md-3">
-        <div class="card border-0 shadow-small mt-3" >
-          <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
-          <div class="card-body">
-            <h6 class="card-title"><?=$informatique["PRODLibelle"]?></h6>
-            <p class="text-muted small text-truncate"><?=$informatique["PRODDesc"] ?></p>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$informatique['PRODRef']?>">Ajoutez au panier</a></div>
-                <div class="col-4 mt-auto mb-auto px-0"><strong><?=$informatique["PRODPrix"]?> &euro;</strong></div>
+        <div class="col-sm-1 col-md-3">
+          <div class="card border-0 shadow-small mt-3" >
+            <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title"><?=$informatique["PRODLibelle"]?></h6>
+              <p class="text-muted small text-truncate"><?=$informatique["PRODDesc"] ?></p>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$informatique['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-4 mt-auto mb-auto px-0"><strong><?=$informatique["PRODPrix"]?> &euro;</strong></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <?php
-    }
-    ?>
+        <?php
+      }
+      ?>
+    </div>
   </div>
 </div>
+<div class="row">
+  <div class="col my-4">
+    <a href="" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus</a>
+  </div>
 </div>
-
 
 <div>
   <h2  class="nav-link active color-dark h6 d-md-block text-center display-4  display-4">JEUX VIDEO</h2>
@@ -153,35 +170,48 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
   </div>
 </div>
 
+<div class="row">
+  <div class="col my-4">
+    <a href="" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus</a>
+  </div>
+</div>
+
+
 <div >
-<h2  class="nav-link active  h6 d-md-block text-center display-4">OBJETS CONNECTES</h2>
-<div class="container-fluid">
-  <div class="row pb-4">
+  <h2  class="nav-link active  h6 d-md-block text-center display-4">OBJETS CONNECTES</h2>
+  <div class="container-fluid">
+    <div class="row pb-4">
 
-    <?php
-    foreach($infoobjet as $objet){
-      ?>
+      <?php
+      foreach($infoobjet as $objet){
+        ?>
 
-      <div class="col-sm-1 col-md-3">
-        <div class="card border-0 shadow-small mt-3" >
-          <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
-          <div class="card-body">
-            <h6 class="card-title"><?= $objet["PRODLibelle"]?></h6>
-            <p class="text-muted small text-truncate"><?=$objet["PRODDesc"] ?></p>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$objet['PRODRef']?>">Ajoutez au panier</a></div>
-                <div class="col-4 mt-auto mb-auto px-0"><strong><?=$objet["PRODPrix"]?> &euro;</strong></div>
+        <div class="col-sm-1 col-md-3">
+          <div class="card border-0 shadow-small mt-3" >
+            <img src="https://launches-media.endclothing.com/EE3709_launches_thumbnail.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <h6 class="card-title"><?= $objet["PRODLibelle"]?></h6>
+              <p class="text-muted small text-truncate"><?=$objet["PRODDesc"] ?></p>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$objet['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-4 mt-auto mb-auto px-0"><strong><?=$objet["PRODPrix"]?> &euro;</strong></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <?php
-    }
-    ?>
+        <?php
+      }
+      ?>
+    </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col my-4">
+    <a href="" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus d'objets connectés</a>
+  </div>
 </div>
 
 <div >
@@ -213,6 +243,13 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO');
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col my-4">
+    <a href="" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus d'occasions'</a>
+  </div>
+</div>
+
 <script>
 $('.addtocart').click(function(){
   $.ajax({

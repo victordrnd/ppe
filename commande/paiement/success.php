@@ -29,7 +29,6 @@ $commandeinfo = $commande->getInfo(htmlspecialchars($_GET['token']), true);
                   <div class="col-1 col-md-2">
 
                     <p class="mt-4">Quantité : <?=$produit['LIGNQte']?></p>
-                    <input type="number" value="<?=$produit['number']?>" class="mt-4 form-groups border-0 w-25"/>
                   </div>
                 </div></li>
                 <?php

@@ -10,7 +10,11 @@ $panierinfo = $panier->getCart(true);
 foreach($panierinfo as $produit){
   $prixtotal += $produit['Productinfo']['PRODPrix'] * $produit['number'];
 }
+if(isset($_SESSION['COUPONCode'])){
+  $prixtotal *= (1 - ($_SESSION['COUPONReduction'] / 100));
+}
 $prixht = $prixtotal *0.8;
+
 $tva = $prixtotal - $prixht;
 ?>
 <body>

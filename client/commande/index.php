@@ -33,13 +33,11 @@ $commandeinfo = $commande->getInfo(htmlspecialchars($_GET['id']), true );
 
                     <img src="../../assets/upload/produits/<?=$produit[0]['PRODRef']?>.png" class=" mt-4 mt-md-0 img-fluid w-25 mx-auto d-block"/>
                   </div>
-                  <div class="col-6">
+                  <div class="col-5">
                     <p class="mt-5 text-center align-middle"><?=$produit[0]['PRODLibelle']?></p>
                   </div>
-                  <div class="col-2">
-
+                  <div class="col-3">
                     <p class="mt-5">Quantité : <?=$produit['LIGNQte']?></p>
-                    <input type="number" value="<?=$produit['number']?>" class="mt-4 form-groups border-0 w-25"/>
                   </div>
                 </div></li>
                 <?php
@@ -62,9 +60,9 @@ $commandeinfo = $commande->getInfo(htmlspecialchars($_GET['id']), true );
       <div class="mt-5">
         <h2 class="mt-3">Livraison</h2>
         <ul class="list-unstyled mt-3">
-          <h6 class="mt-3">Ville: <span class="float-right">Lyon</span></h6>
-          <h6>Code Postal : <span class="float-right">69002</span></h6>
-          <h6>Adresse : <span class="float-right">8 rue paume</span></h6>
+          <h6 class="mt-3">Ville: <span class="float-right"><?=$commandeinfo[0]['COMVille']?></span></h6>
+          <h6>Code Postal : <span class="float-right"><?=$commandeinfo[0]['COMCP']?></span></h6>
+          <h6>Adresse : <span class="float-right"><?=$commandeinfo[0]['COMAdresse']?></span></h6>
           <h6>Date estimée : <span class="float-right"><?=date('Y-m-d', strtotime($commandeinfo[0]['COMDate']. ' + 3 days'));?></span></h6>
         </ul>
       </div>

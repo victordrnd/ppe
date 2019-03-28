@@ -6,6 +6,9 @@ class Commande{
   public $comref;
   public $comprix;
   public $comcliid;
+  public $comville;
+  public $comcp;
+  public $comadresse;
   public $comstatus = 'En traitement';
 
 
@@ -15,8 +18,8 @@ class Commande{
 
   public function save(){
     $date = date('Y-m-d');
-    $array = array(tostring($this->comref),"('".$date."')", tostring($this->comprix), tostring($this->comstatus), tostring($this->comcliid));
-    $rows = "COMRef, COMDate, COMPrix, COMStatus, COMCliId";
+    $array = array(tostring($this->comref),"('".$date."')", tostring($this->comprix), tostring($this->comstatus), tostring($this->comville), $this->comcp, tostring($this->comadresse), tostring($this->comcliid));
+    $rows = "COMRef, COMDate, COMPrix, COMStatus, COMVille, COMCP, COMAdresse, COMCliId";
     $this->bdd->insert('commande', $array, $rows);
   }
 

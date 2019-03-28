@@ -1,6 +1,17 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 $panier = new Panier;
+if(isset($_POST['coupon'])){
+  $coupon = new Coupon;
+  $coupon = $coupon->retrieve($_POST['coupon']);
+  if(!empty($coupon[0]) && !Is_string($coupon)){
+    $_SESSION['COUPONCode'] = $coupon['COUPONCode'];
+    $_SESSION['COUPONReduction'] = $coupon['COUPONReduction'];
+  }
+  else{
+    $error = $coupon;
+  }
+}
 ?>
 <body>
   <h1 class="text-center mb-4">Votre panier</h1>
@@ -39,6 +50,9 @@ $panier = new Panier;
               <?php
             }
             $prixht = $prixtotal *0.8;
+            if(isset($coupon['COUPONCode'])){
+              $prixtotal *= (1 - ($coupon['COUPONReduction'] / 100));
+            }
             $tva = $prixtotal - $prixht;
           }
           else{
@@ -70,11 +84,24 @@ $panier = new Panier;
         <h3>Récapitulatif</h3>
         <h6 class="mt-3">Sous total HT: <span class="float-right"><?=$prixht?>&euro;</span></h6>
         <p class="small"><strong>TVA : <span class="float-right"><?=$tva?>&euro;</span></strong></p>
+        <?php
+        if(isset($coupon['COUPONCode'])){
+          echo '<p class="small"><strong>Réduction : <span class="float-right">'.$coupon['COUPONReduction'].'%</span></strong></p>';
+        }
+        ?>
         <h6 class="mt-5 border-top pt-3">Total : <span class="float-right"><?=$prixtotal?>&euro;</span></h6>
       </div>
-      <form class="card p-0 mt-5 border-0 shadow-small w-100">
+      <?php
+      if(isset($error)){
+        echo '<div class="alert alert-warning mt-2" role="alert">
+        Le coupon n&apos;existe pas.
+        </div>';
+      }
+      ?>
+      <form class="card p-0 mt-5 border-0 shadow-small w-100" method="post" action="">
+
         <div class="input-group">
-          <input type="text" class="form-control border-0" placeholder="Code promo">
+          <input type="text" class="form-control border-0" name="coupon" placeholder="Code promo">
           <div class="input-group-append">
             <button type="submit" class="btn btn-warning">Appliquer</button>
           </div>
