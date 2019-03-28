@@ -16,6 +16,7 @@ if(isset($_POST['ville']) && !empty($_SESSION['ProductsInCart'])){
   if(isset($_SESSION['COUPONCode'])){
     $prixtotal *= (1 - ($_SESSION['COUPONReduction'] / 100));
   }
+  //var_dump($panier->getCart(true));
   //on sauvegarde la commande
   $commande->comref = $comref;
   $commande->comprix = $prixtotal;
