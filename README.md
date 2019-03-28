@@ -20,5 +20,3 @@
 
 ## To Do List
 
-- Faire la page d'un produit spécifique
-- Ajouter COMVille, COMCP, COMAdresse à la table commande 
