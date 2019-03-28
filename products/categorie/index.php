@@ -62,7 +62,6 @@ else{
   </div>
 </body>
 
-<script>
 
 <script>
 $('.addtocart').click(function(){
@@ -78,5 +77,4 @@ $('.addtocart').click(function(){
 })
 
 
-</script>
 </script>
