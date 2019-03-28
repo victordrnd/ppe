@@ -21,7 +21,7 @@ class Produit{
     if(!empty($productinfo)){
       $categorie = new Categorie;
       $categorieinfo = $categorie->getCategorieById($produitinfo[0]['PRODCatCode']);
-      $produitinf[1] = $categorieinfo[0];
+      $produitinfo[1] = $categorieinfo[0];
     }
 
 
