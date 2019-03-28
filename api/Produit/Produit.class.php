@@ -16,13 +16,14 @@ class Produit{
     return $produitinfo;
   }
 
-  public function getProduitById($produitid){
+  public function getProduitById($produitid, $moreinfo = null){
     $produitinfo = $this->bdd->select('produit', '*', 'PRODRef='.tostring($produitid));
     if(!empty($productinfo)){
       $categorie = new Categorie;
       $categorieinfo = $categorie->getCategorieById($produitinfo[0]['PRODCatCode']);
-      $produitinfo[0]['Categorie'] = $categorieinfo[0];
+      $produitinf[1] = $categorieinfo[0];
     }
+
 
     return $produitinfo;
   }
