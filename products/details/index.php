@@ -1,27 +1,30 @@
 <?php
 include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
+$produit = new Produit;
+$produitinfo = $produit->getProduitById($_GET['ProduitId']);
+//var_dump($produitinfo);
 ?>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb bg-white">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <li class="breadcrumb-item"><a class="text-warning" href="../../">Accueil</a></li>
+    <li class="breadcrumb-item"><a class="text-warning" href="../categorie/?categorie=<?=$produitinfo[0]['Categorie']['CATCode']?>"><?=$produitinfo[0]['Categorie']['CATLibelle']?></a></li>
+    <li class="breadcrumb-item active" aria-current="page"><?=$produitinfo[0]['PRODLibelle']?></li>
   </ol>
 </nav>
 
 <div class="row">
   <div class="col-md-6 col-12 d-flex">
     <div class="card border-0 shadow small mt-3 ml-md-5 flex-fill mx-5">
-      <img class="w-50 d-block mx-auto mt-5" src="../../assets/index/gghome1.png" alt="">
+      <img class="w-50 d-block mx-auto mt-5 mb-5" src="../../assets/upload/produits/<?=$produitinfo[0]['PRODRef']?>.png" alt="">
     </div>
   </div>
   <div class="col-md-6 col-12 d-flex">
     <div class="card border-0 mx-5 flex-fill">
-      <h3 class="mt-3 text-center display-4">Nom produit</h3>
-      <h6 class="mt-5 ml-md-3 h2"><strong>999€</strong></h6>
+      <h3 class="mt-3 text-center display-4"><?=$produitinfo[0]['PRODLibelle']?></h3>
+      <h6 class="mt-5 ml-md-3 h2"><strong><?=$produitinfo[0]['PRODPrix']?>€</strong></h6>
       <h6 class="mt-3 ml-md-3"><span class="badge badge-warning">En stock</span></h6>
       <h6 class="mt-5 ml-md-3 font-weight-light"><span class="float-right mt-5">*Livraison gratuite à partir de 100€ d'achat</span></h6>
-      <a class="btn btn-warning float-right mx-3 mt-md-3" href="#">Achetez</a>
+      <a class="btn btn-warning float-right mx-3 mt-md-3 addtocart" id="<?=$produitinfo[0]['PRODRef']?>" href="#">Achetez</a>
     </div>
   </div>
 </div>
@@ -30,7 +33,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     <div class="col-12">
       <div class="card border-0 mx-5 mt-5">
         <h4 class="mt-3 text-center">Descriptif technique</h4>
-        <h5 class="mt-3 ml-md-3 font-weight-light text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+        <h5 class="mt-3 ml-md-3 font-weight-light text-justify"><?=$produitinfo[0]['PRODDesc']?></h5>
       </div>
     </div>
   </div>
@@ -77,6 +80,21 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
       </div>
     </div>
   </div>
+  <script>
+  $('.addtocart').click(function(){
+    $.ajax({
+      type: 'GET',
+      url: '../process/addtocart.php',
+      data: {
+        'productId': this.id,
+      }
+    });
+    var numberinCart = $('#numberInCart').html();
+    $('#numberInCart').html(parseInt($('#numberInCart').html()) + 1);
+  })
+
+
+  </script>
   <?php
   include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';
   ?>

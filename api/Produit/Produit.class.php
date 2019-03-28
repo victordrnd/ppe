@@ -18,11 +18,12 @@ class Produit{
 
   public function getProduitById($produitid, $moreinfo = null){
     $produitinfo = $this->bdd->select('produit', '*', 'PRODRef='.tostring($produitid));
-    if(!empty($productinfo)){
-      $categorie = new Categorie;
-      $categorieinfo = $categorie->getCategorieById($produitinfo[0]['PRODCatCode']);
-      $produitinfo[1] = $categorieinfo[0];
-    }
+
+    $categorie = new Categorie;
+    $categorieinfo = $categorie->getCategorieById($produitinfo[0]['PRODCatCode']);
+    $produitinfo[0]['Categorie'] = $categorieinfo[0];
+
+
 
 
     return $produitinfo;
@@ -51,12 +52,12 @@ class Produit{
     }
     $binaire = imagecreatefromstring(file_get_contents($image['tmp_name']));
     imagepng($binaire, $target.$id.'.png',0);
-    }
+  }
 
-    public function ajouter($ref, $nom,$prix, $desc, $cat){
-      $rows = "PRODRef, PRODLibelle, PRODprix, PRODDesc, PRODCatCode";
-      $ajout = $this->bdd->insert('produit', array(tostring($ref),tostring($nom),$prix,tostring($desc), tostring($cat)), $rows);
-    }
+  public function ajouter($ref, $nom,$prix, $desc, $cat){
+    $rows = "PRODRef, PRODLibelle, PRODprix, PRODDesc, PRODCatCode";
+    $ajout = $this->bdd->insert('produit', array(tostring($ref),tostring($nom),$prix,tostring($desc), tostring($cat)), $rows);
+  }
 
 }
 ?>
