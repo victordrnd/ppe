@@ -27,7 +27,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
       foreach($telinfo as $telephone){
         ?>
         <div class="col-sm-1 col-md-3 d-flex">
-          <div class="card border-0 shadow-small mt-3 flex-fill">
+          <div class="card border-0 shadow-small mt-3 flex-fill " id="<?=$telephone['PRODRef']?>">
             <div class="row m-2">
               <div class="offset-10 col-2">
                 <span class="badge badge-secondary float-right">Dispo</span>
@@ -77,7 +77,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
         ?>
 
         <div class="col-sm-1 col-md-3 d-flex">
-          <div class="card border-0 shadow-small mt-3 flex-fill" >
+          <div class="card border-0 shadow-small mt-3 flex-fill" id="<?=$imageson['PRODRef']?>">
             <img src="../assets/upload/produits/<?=$imageson['PRODRef']?>.png" class="d-block mx-auto w-50 mt-1" alt="">
             <div class="card-body">
               <h6 class="card-title"><?=$imageson["PRODLibelle"]?></h6>
@@ -116,7 +116,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
         ?>
 
         <div class="col-sm-1 col-md-3">
-          <div class="card border-0 shadow-small mt-3" >
+          <div class="card border-0 shadow-small mt-3" id="<?=$informatique['PRODRef']?>">
             <img src="../assets/upload/produits/<?=$informatique['PRODRef']?>.png" class="card-img-top" alt="">
             <div class="card-body">
               <h6 class="card-title"><?=$informatique["PRODLibelle"]?></h6>
@@ -156,7 +156,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
         ?>
 
         <div class="col-sm-1 col-md-3">
-          <div class="card border-0 shadow-small mt-3" >
+          <div class="card border-0 shadow-small mt-3" id="<?=$console['PRODRef']?>">
             <img src="../assets/upload/produits/<?=$console['PRODRef']?>.png" class="card-img-top" alt="">
             <div class="card-body">
               <h6 class="card-title"><?= $console["PRODLibelle"]?></h6>
@@ -197,7 +197,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
         ?>
 
         <div class="col-sm-1 col-md-3">
-          <div class="card border-0 shadow-small mt-3" >
+          <div class="card border-0 shadow-small mt-3" id="<?=$objet['PRODRef']?>">
             <img src="../assets/upload/produits/<?=$objet['PRODRef']?>.png" class="card-img-top" alt="">
             <div class="card-body">
               <h6 class="card-title"><?= $objet["PRODLibelle"]?></h6>
@@ -235,7 +235,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
       foreach($infooccasion as $occasion){
         ?>
         <div class="col-sm-1 col-md-3 d-flex">
-          <div class="card border-0 shadow-small mt-3 flex-fill">
+          <div class="card border-0 shadow-small mt-3 flex-fill" id="<?=$occasion['PRODRef']?>">
             <img src="../assets/upload/produits/<?=$occasion['PRODRef']?>.png" class="card-img-top" alt="">
             <div class="card-body">
               <h6 class="card-title"><?= $occasion["PRODLibelle"]?></h6>
@@ -277,8 +277,17 @@ $('.addtocart').click(function(){
   $('#numberInCart').html(parseInt($('#numberInCart').html()) + 1);
 })
 
+$('.card').click(function(){
+  window.location.href= "details/?ProduitId="+this.id;
+})
 
 </script>
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';
 ?>
+<style>
+
+.card-img-top{
+    cursor:pointer;
+  }
+</style>

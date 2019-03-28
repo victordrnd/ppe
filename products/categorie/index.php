@@ -29,7 +29,7 @@ else{
         foreach($info as $chaqueproduit){
           ?>
           <div class="col-sm-1 col-md-3 d-flex">
-            <div class="card border-0 shadow-small mt-3 flex-fill">
+            <div class="card border-0 shadow-small mt-3 flex-fill" id="<?=$chaqueproduit['PRODRef']?>">
               <div class="row m-2">
                 <div class="offset-10 col-2">
                   <span class="badge badge-secondary float-right">Dispo</span>
@@ -63,7 +63,7 @@ else{
 </body>
 
 <?php
-  include  $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';
+  include  $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';
  ?>
 
 
@@ -80,5 +80,8 @@ $('.addtocart').click(function(){
   $('#numberInCart').html(parseInt($('#numberInCart').html()) + 1);
 })
 
+$('.card').click(function(){
+  window.location.href= "../details/?ProduitId="+this.id;
+})
 
 </script>
