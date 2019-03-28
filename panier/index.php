@@ -32,7 +32,7 @@ if(isset($_POST['coupon'])){
                 <div class="row">
                   <div class="col-3">
 
-                    <img src="../assets/upload/produits/<?=$produit['ProductId']?>.png" class="mt-4 my-auto img-fluid w-25 mx-auto d-block"/>
+                    <img src="../assets/upload/produits/<?=$produit['ProductId']?>.png" class="mt-4 my-auto img-fluid w-50 mx-auto d-block"/>
                   </div>
                   <div class="col-6">
                     <p class="mt-4 text-center align-middle"><?=$produit['Productinfo']['PRODLibelle']?></p>
