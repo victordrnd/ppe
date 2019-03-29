@@ -277,7 +277,7 @@ $('.addtocart').click(function(){
   $('#numberInCart').html(parseInt($('#numberInCart').html()) + 1);
 })
 
-$('.card').click(function(){
+$('.card').children('img').click(function(){
   window.location.href= "details/?ProduitId="+this.id;
 })
 
