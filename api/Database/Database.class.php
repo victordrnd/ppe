@@ -2,8 +2,8 @@
 class Database{
   private static $dbName = 'ppe';
   private static $dbHost = 'localhost';
-  private static $dbUser = 'root';
-  private static $dbPassword = '';
+  private static $dbUser = 'user';
+  private static $dbPassword = 'root';
   private static $pdo = null;
   public function __construct(){
     die("La fonction d'initialisation est interdite");
