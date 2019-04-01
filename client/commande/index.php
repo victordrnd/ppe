@@ -82,12 +82,13 @@ $url='https://api.mapbox.com/geocoding/v5/mapbox.places/Tassin.json?access_token
   </body>
 
   <script>
+
+
   var adresse = encodeURIComponent('<?=$commandeinfo[0]['COMVille']?> <?=$commandeinfo[0]['COMAdresse']?>');
   var url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+adresse+'.json?access_token=pk.eyJ1IjoibWF0dGZpY2tlIiwiYSI6ImNqNnM2YmFoNzAwcTMzM214NTB1NHdwbnoifQ.Or19S7KmYPHW8YjRz82v6g&cachebuster=1554043397048&autocomplete=true';
   fetch(url)
   .then((resp) => resp.json())
   .then(function(data){
-
     mapboxgl.accessToken = 'pk.eyJ1IjoidmljdG9yZHJuZCIsImEiOiJjanR3eHhhY3oxNDUwNDNsemE1aG5peGl2In0.YeRJsFQXOp8GFHBiQsoHEQ';
     var map = new mapboxgl.Map({
       container: 'map',
@@ -96,6 +97,7 @@ $url='https://api.mapbox.com/geocoding/v5/mapbox.places/Tassin.json?access_token
       center: data['features'][0]['center'],
       pitch: 45,
       bearing: -17.6,
+      logo : false,
       attributionControl: false
     });
     map.on('load', function() {
@@ -108,6 +110,11 @@ $url='https://api.mapbox.com/geocoding/v5/mapbox.places/Tassin.json?access_token
           break;
         }
       }
+
+
+
+
+
       map.loadImage('../../assets/map/pin.png', function(error, image) {
         if (error) throw error;
         map.addImage('cat', image);
@@ -157,6 +164,7 @@ $url='https://api.mapbox.com/geocoding/v5/mapbox.places/Tassin.json?access_token
             'fill-extrusion-opacity': .6
           }
         }, labelLayerId);
+        
       });
     });
 
@@ -171,7 +179,7 @@ $url='https://api.mapbox.com/geocoding/v5/mapbox.places/Tassin.json?access_token
 </script>
 <style>
 .mapbox-logo{
-    display: none !important;
+  display: none !important;
 }
 </style>
 <?php
