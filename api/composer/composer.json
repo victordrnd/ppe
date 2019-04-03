@@ -1,0 +1,5 @@
+{
+    "require": {
+        "victorjonsson/markdowndocs": "^1.3"
+    }
+}
