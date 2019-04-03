@@ -1,7 +1,16 @@
 <?php
+/**
+* Permet l'accès aux données du panier d'un client
+*/
 class Panier{
 
 
+
+  /**
+  * Permet l'ajout d'un produit au panier
+  * @param string $productid
+  * @return array
+  */
   public function addToCart($productid){
     if(isset($_SESSION['ProductsInCart'])){
       $array = json_decode($_SESSION['ProductsInCart']);
@@ -16,6 +25,13 @@ class Panier{
   }
 
 
+
+
+  /**
+  *Permet d'obtenir le panier d'un utilisateur
+  * @param boolean $moreinfo
+  * @return array
+  */
   public function getCart($moreinfo = false){
     if(isset($_SESSION['ProductsInCart']) && !empty($_SESSION['ProductsInCart'])){
       $cart = array_count_values(json_decode($_SESSION['ProductsInCart']));
@@ -39,6 +55,14 @@ class Panier{
   }
 
 
+
+
+
+  /**
+  * Permet de retirer un produit du Panier
+  * @param string $productid
+  * @return void
+  */
   public function removeFromCart($productid){
     if(isset($_SESSION['ProductsInCart'])){
       $array = json_decode($_SESSION['ProductsInCart']);
@@ -54,6 +78,15 @@ class Panier{
     }
   }
 
+
+
+
+    /**
+    * Permet de retirer une certaine quantité d'un produit du Panier
+    * @param string $productid
+    * @param int $number
+    * @return void
+    */
   public function removeQtyFromCart($productid, $number){
     $cart = json_decode($_SESSION['ProductsInCart']);
     $countofthisproduct = count(array_keys($cart, $productid));
@@ -75,6 +108,14 @@ class Panier{
 
   }
 
+
+
+  /**
+  * Permet d'ajouter une certaine quantité d'un produit au Panier
+  * @param string $productid
+  * @param int $number
+  * @return void
+  */
   public function addQtyFromCart($productid,$number){
     $cart = json_decode($_SESSION['ProductsInCart']);
     for($i=1;$i<=$number;$i++){

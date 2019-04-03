@@ -82,7 +82,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   <div class="row mt-5 mx-lg-5">
 
     <div class="col-md col-12 mt-5 mt-md-0 mx-lg-5 d-flex">
-      <div class="card border-0 shadow-small flex-fill">
+      <div class="card border-0 shadow-small flex-fill categorie" id="INFORMATIQUE">
         <img src="assets/index/video_call.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center mt-5">INFORMATIQUE</h5>
@@ -91,7 +91,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     </div>
 
     <div class="col-md col-12 mt-5 mt-md-0 mx-lg-5 d-flex">
-      <div class="card border-0 shadow-small flex-fill">
+      <div class="card border-0 shadow-small flex-fill categorie" id="IMAGESON">
         <img src="assets/index/vr.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center mt-4">IMAGE & SON</h5>
@@ -99,42 +99,42 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
       </div>
     </div>
 
-    <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex">
-        <div class="card border-0 shadow-small flex-fill">
-          <img src="assets/index/mobile_phone.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-center">TÉLÉPHONIE</h5>
-          </div>
+    <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex" id="TEL">
+      <div class="card border-0 shadow-small flex-fill categorie">
+        <img src="assets/index/mobile_phone.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-center">TÉLÉPHONIE</h5>
         </div>
+      </div>
     </div>
   </div>
 
   <div class="row mt-5 mx-lg-5">
-    <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex">
-        <div class="card border-0 shadow-small flex-fill">
-          <img src="assets/index/data_center.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
-          <div class="card-body mt-2">
-            <h5 class="card-title text-center mt-5">OBJETS CONNECTÉS</h5>
-          </div>
+    <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex ">
+      <div class="card border-0 shadow-small flex-fill categorie" id="OBJETSCO">
+        <img src="assets/index/data_center.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
+        <div class="card-body mt-2">
+          <h5 class="card-title text-center mt-5">OBJETS CONNECTÉS</h5>
         </div>
+      </div>
     </div>
 
     <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex">
-        <div class="card border-0 shadow-small flex-fill">
-          <img src="assets/index/game_time.svg" class="card-img w-75 mx-auto d-block mt-5" style="" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-center mt-5">JEUX VIDÉO</h5>
-          </div>
+      <div class="card border-0 shadow-small flex-fill categorie" id="CONS">
+        <img src="assets/index/game_time.svg" class="card-img w-75 mx-auto d-block mt-5" style="" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-center mt-5">JEUX VIDÉO</h5>
         </div>
+      </div>
     </div>
 
     <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex">
-        <div class="card border-0 shadow-small flex-fill">
-          <img src="assets/index/online_shopping.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-center mb-2">RECONDITIONNÉS</h5>
-          </div>
+      <div class="card border-0 shadow-small flex-fill categorie" id="OCCAS">
+        <img src="assets/index/online_shopping.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-center mb-2">RECONDITIONNÉS</h5>
         </div>
+      </div>
     </div>
   </div>
   <h1 class="display-4 font-weight-normal text-center mt-5">Nouveautés</h1>
@@ -230,6 +230,10 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   }
 </script>
 <script type="text/javascript">
+$('.categorie').click(function(){
+  window.location.href="products/categorie/?categorie="+this.id;
+});
+
 function onHover(id)
 {
 

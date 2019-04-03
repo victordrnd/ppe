@@ -1,13 +1,75 @@
 <?php
+/**
+* Classe qui permet de se connecter à la base de donnée
+*/
 class Database{
+
+
+
+  /**
+  * @var string $dbName
+  */
   private static $dbName = 'ppe';
+
+
+
+
+
+
+  /**
+  * @var string $dbHost
+  */
   private static $dbHost = 'localhost';
-  private static $dbUser = 'user';
+
+
+
+
+
+
+  /**
+  * @var string $dbUser
+  */
+  private static $dbUser = 'victor';
+
+
+
+
+
+
+
+
+
+  /**
+  * @var string $dbPassword
+  */
   private static $dbPassword = 'root';
+
+
+
+
+
+
+
+  /**
+  * @var object $pdo
+  */
   private static $pdo = null;
+
+
+
+
+
+
+
   public function __construct(){
     die("La fonction d'initialisation est interdite");
   }
+
+
+
+  /**
+  * Permet l'instatiation de l'objet PDO
+  */
   public static function connect(){
     if (null == self::$pdo){
       try{
@@ -19,11 +81,25 @@ class Database{
     }
     return self::$pdo;
   }
+
+
+
+
+
+  /**
+  * Permet de détruire l'objet self::$pdo
+  */
   public static function disconnect(){
     self::$pdo = null;
   }
+
+
+
 }
+
+
+
 function tostring($str){
- return '"'.$str.'"';
+  return '"'.$str.'"';
 }
- ?>
+?>
