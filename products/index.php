@@ -17,7 +17,19 @@ $infoconsole = $produit->getProduitByCat('CONS', 8);
 $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
 ?>
 
+<div class="row">
+  <div class="col-md-8 col-12">
 
+  </div>
+  <div class="col-md-4 col-12">
+    <div class="bs-component mt-4 mr-4">
+          <div class="alert alert-dismissible alert-secondary">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>StockPro!</strong> -25% sur tous les articles avant minuit avec le code: <strong>CHARTREUX25</strong>
+          </div>
+        </div>
+  </div>
+</div>
 <div class="">
   <h2  class="nav-link active d-md-block text-center display-4">TELEPHONIE</h2>
   <div class="container-fluid ">
