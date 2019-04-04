@@ -3,6 +3,7 @@ $root = '';
 include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <body>
+
   <div class="position-relative overflow-hidden p-3 px-md-5 m-md-3 text-center">
     <div class="col-md-5 p-lg-5 mx-auto my-5 ">
       <h1 class="display-4 font-weight-normal">Les nouveautées</h1>
@@ -98,13 +99,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
       </div>
     </div>
 
-<<<<<<< HEAD
-    <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex">
-      <div class="card border-0 shadow-small flex-fill">
-=======
     <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex" id="TEL">
       <div class="card border-0 shadow-small flex-fill categorie">
->>>>>>> 9777dc2ed3fb4acae34cd871a7d26a744247f742
         <img src="assets/index/mobile_phone.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">TÉLÉPHONIE</h5>
@@ -114,13 +110,8 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   </div>
 
   <div class="row mt-5 mx-lg-5">
-<<<<<<< HEAD
-    <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex">
-      <div class="card border-0 shadow-small flex-fill">
-=======
     <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex ">
       <div class="card border-0 shadow-small flex-fill categorie" id="OBJETSCO">
->>>>>>> 9777dc2ed3fb4acae34cd871a7d26a744247f742
         <img src="assets/index/data_center.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
         <div class="card-body mt-2">
           <h5 class="card-title text-center mt-5">OBJETS CONNECTÉS</h5>
@@ -129,11 +120,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     </div>
 
     <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex">
-<<<<<<< HEAD
-      <div class="card border-0 shadow-small flex-fill">
-=======
       <div class="card border-0 shadow-small flex-fill categorie" id="CONS">
->>>>>>> 9777dc2ed3fb4acae34cd871a7d26a744247f742
         <img src="assets/index/game_time.svg" class="card-img w-75 mx-auto d-block mt-5" style="" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center mt-5">JEUX VIDÉO</h5>
@@ -142,11 +129,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     </div>
 
     <div class="col-md col-12 mt-5 mt-md-0 mr-md-3 mx-lg-5 d-flex">
-<<<<<<< HEAD
-      <div class="card border-0 shadow-small flex-fill">
-=======
       <div class="card border-0 shadow-small flex-fill categorie" id="OCCAS">
->>>>>>> 9777dc2ed3fb4acae34cd871a7d26a744247f742
         <img src="assets/index/online_shopping.svg" class="card-img w-75 mx-auto d-block" style="" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center mb-2">RECONDITIONNÉS</h5>
@@ -229,18 +212,15 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
       </div>
     </div>
     <div class="container">
-
-
-      <div class="row">
-        <div class="col mt-5">
-          <div class="card border-0 shadow-small">
-            <h2 class="text-center mt-2">Pour toutes commandes passée avant minuit <i class="fas fa-stopwatch"></i></h2>
-            <h3 class="text-center m-2">-25% sur tous les articles avec le code: CHARTREUX25</h3>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col mt-5">
+      <div class="card border-0 shadow-small">
+        <h2 class="text-center mt-2">Pour toutes commandes passée avant minuit <i class="fas fa-stopwatch"></i></h2>
+        <h3 class="text-center m-2">-25% sur tous les articles avec le code: CHARTREUX25</h3>
       </div>
     </div>
-
+  </div>
+</div>
   </body>
   <script src="vendor/rellax.min.js"></script>
   <script>
