@@ -31,6 +31,7 @@ else{
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="http://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2019-03-23/1ac13e0c008e7cdb8d3eaeb76ca87aa4.ico">
 <link href="https://fonts.googleapis.com/css?family=Audiowide|Orbitron:900" rel="stylesheet">
+
 <header>
   <ul class="nav shadow-sm p-3 " style="min-height:70px;">
     <li class="nav-item d-none d-md-block">
@@ -58,6 +59,7 @@ else{
       </div>
     </ul>
   </header>
+
   <style>
   .color-grey{
     color:#737373 !important;

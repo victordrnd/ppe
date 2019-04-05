@@ -207,10 +207,20 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
           </div>
         </div>
         <div class="col-md-6 px-0" >
-          <img class="w-100" alt="..." src="assets/index/s10buds.webp" />
+          <img class="w-100" style="height:640px;" alt="..." src="assets/index/s10buds.webp" />
         </div>
       </div>
     </div>
+    <div class="container">
+  <div class="row">
+    <div class="col mt-5">
+      <div class="card border-0 shadow-small">
+        <h2 class="text-center mt-2">Pour toutes commandes passée avant minuit <i class="fas fa-stopwatch"></i></h2>
+        <h3 class="text-center m-2">-25% sur tous les articles avec le code: CHARTREUX25</h3>
+      </div>
+    </div>
+  </div>
+</div>
   </body>
   <script src="vendor/rellax.min.js"></script>
   <script>
