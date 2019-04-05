@@ -13,18 +13,18 @@ Ce dossier contient l'ensemble des éléments à inclure dans vos pages.
 
 Ce dossier contient l'ensemble des scripts php étant appelés par les requêtes asynchrones de l'interface
 
- - addQtyFromCart.php appelle la méthode addQtyFromCart de la classe **Panier**
- - addToCart.php appelle la méthode addtocart() de la classe **Panier**
- - removeFromCart.php appelle la méthode removeFromCart() de la classe **Panier**
- - removeQtyFromCart.php appelle la méthode removeQtyFromCart() de la classe **Panier**
+- addQtyFromCart.php appelle la méthode addQtyFromCart de la classe **Panier**
+- addToCart.php appelle la méthode addtocart() de la classe **Panier**
+- removeFromCart.php appelle la méthode removeFromCart() de la classe **Panier**
+- removeQtyFromCart.php appelle la méthode removeQtyFromCart() de la classe **Panier**
 
 ### Dossier /assets
 Ce dossier contient l'ensemble des images présentes sur StockPro
 
-  - **index** Ce dossier contient les images de la page d'accueil
-  - **map** Ce dossier contient les images de la carte de livraison
-  - **upload** Ce dossier contient les images que l'API a générée
-  - **vendor** Ce dossier est le dossier des bibliothèques packagist
+- **index** Ce dossier contient les images de la page d'accueil
+- **map** Ce dossier contient les images de la carte de livraison
+- **upload** Ce dossier contient les images que l'API a générée
+- **vendor** Ce dossier est le dossier des bibliothèques packagist
 
 # Documentation de L'API
 ## Installation
@@ -36,7 +36,7 @@ Afin de commencer à utiliser l'API il est nécessaire d'inclure le fichier de c
 include 'api/autoload.php';
 ```
 
- Il vous est ensuite possible d'utiliser les classes en les instanciant à l'aide de **new {{Classe}}**
+Il vous est ensuite possible d'utiliser les classes en les instanciant à l'aide de **new {{Classe}}**
 
 ### Class: Database
 
@@ -135,7 +135,7 @@ echo json_encode($utilisateurinfo);
 
 #### Appel de la fonction getAll()
 
-```js
+```php
 $produit = new Produit;
 $produitslist = $produit->getAll();
 ```
@@ -149,7 +149,23 @@ $produitslist = $produit->getAll();
 | public | <strong>__construct()</strong> : <em>void</em> |
 | public | <strong>getCategorieById(</strong><em>string</em> <strong>$catid</strong>)</strong> : <em>mixed</em> |
 
+#### Appel de la fonction getCategorieById()
 
+```php
+$categorie = new Categorie;
+$categorieinfo = $categorie->getCategorieById('TEL');
+```
+
+##### Réponse de la fonction getCategorieById()
+```json
+[
+  {
+    "CATCode":"TEL",
+    "CATLibelle":"TELEPHONIE",
+    "CATDesc":null,
+  }
+]
+```
 
 
 ### Class: Panier
@@ -164,6 +180,38 @@ $produitslist = $produit->getAll();
 | public | <strong>removeFromCart(</strong><em>string</em> <strong>$productid</strong>)</strong> : <em>void</em><br /><em>Permet de retirer un produit du Panier</em> |
 | public | <strong>removeQtyFromCart(</strong><em>string</em> <strong>$productid</strong>, <em>int</em> <strong>$number</strong>)</strong> : <em>void</em><br /><em>Permet de retirer une certaine quantité d'un produit du Panier</em> |
 
+
+#### Appel de la fonction getAll()
+
+```php
+$panier = new Panier;
+$listpanier = $panier->getAll();
+```
+
+##### Réponse de la fonction getAll()
+```json
+[
+  {
+    "ProductId":  "IPHONEXS64GR",
+    "number": 1,
+    "Productinfo" :
+    {
+      "PRODRef": "IPHONEXS64GR",
+      "PRODLibelle" : "iPhone XS 64Go Gris Sidéral",
+      "PRODPrix": 1159,
+      "PRODDesc": "",
+      "PRODCatCode": "TEL",
+      "Categorie":
+      {
+        "CATCode": "TEL"
+        "CATLibelle": "TELEPHONIE"
+        "CATDesc": NULL  
+      }
+    }
+  }
+  ...
+]
+```
 
 
 ### Class: Coupon
@@ -190,8 +238,35 @@ $produitslist = $produit->getAll();
 | public | <strong>getInfo(</strong><em>string</em> <strong>$comref</strong>, <em>boolean</em> <strong>$moreinfo=null</strong>)</strong> : <em>array</em><br /><em>Permet d'obtenir des informations sur une commande existante.</em> |
 | public | <strong>save()</strong> : <em>void</em><br /><em>Procédure qui permet la sauvegarde d'une commande</em> |
 
+#### Réponse de la fontion getByUser()
 
+```
+[
+  {
+    "COMRef": "630d041c78bc0731e6ae7ae303a6dc19",
+    "COMDate": "2019-04-04"
+    "COMPrix": 1159,
+    "COMStatus": "En traitement",
+    "COMVille" : "Lyon",
+    "COMCP" : 69002,
+    "COMAdresse": "58 rue pierre dupont",
+    "COMCliId": "a03ad58d6f78c10037f51ff3dd2016e9"
 
+  },
+  {
+    "COMRef": "9354a51ee1c19d69133a1bfa8462c41c",
+    "COMDate": "2019-04-04",
+    "COMPrix": 2318,
+    "COMStatus": "En traitement",
+    "COMVille": "CALUIRE",
+    "COMCP": 69300,
+    "COMAdresse": "92 C Avenue général de Gaulle",
+    "COMCliId": "a03ad58d6f78c10037f51ff3dd2016e9"
+
+  }
+  ...
+]
+```
 
 
 ### Class: LigneCommande

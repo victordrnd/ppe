@@ -1,8 +1,8 @@
 <?php
 include '../includes/header.php';
-$produit = new Produit;
-$produitinfo = $produit->getProduitByCat('TEL');
-//var_dump($produitinfo);
-$json = json_encode($produitinfo);
-echo $json;
+$panier = new Panier;
+$listpanier = $panier->getAll(true);
+var_dump($listpanier);
+//$json = json_encode($produitinfo);
+//echo $json;
  ?>

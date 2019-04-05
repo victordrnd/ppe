@@ -3,6 +3,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 $commande = new Commande;
 $commandelist = $commande->getByUser($_SESSION['id'], 6);
 //var_dump($commandelist);
+//print("<pre>".print_r($commandelist,true)."</pre>");
 ?>
 <body>
   <h1 class="text-center mt-5">Mon espace client</h1>

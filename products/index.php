@@ -4,6 +4,7 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 $produit = new Produit;
 $telinfo = $produit->getProduitByCat('TEL', 8);
+
 //var_dump($telinfo);
 
 $infooccasion = $produit->getProduitByCat('OCCAS', 8);
