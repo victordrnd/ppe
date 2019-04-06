@@ -29,7 +29,7 @@ class Database{
   /**
   * @var string $dbUser
   */
-    private static $dbUser = 'victor';
+    private static $dbUser = 'root';
 
 
 

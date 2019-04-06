@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 28 mars 2019 à 11:49
+-- G&eacuten&eacuter&eacute le :  jeu. 28 mars 2019 à 11:49
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `ppe`
+-- Base de donn&eacutees :  `ppe`
 --
 
 -- --------------------------------------------------------
@@ -35,11 +35,11 @@ CREATE TABLE `categorie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `categorie`
+-- D&eacutechargement des donn&eacutees de la table `categorie`
 --
 
 INSERT INTO `categorie` (`CATCode`, `CATLibelle`, `CATDesc`) VALUES
-('CONS', 'CONSOLE', 'Jeux vidéo et autres'),
+('CONS', 'CONSOLE', 'Jeux vid&eacuteo et autres'),
 ('IMAGESON', 'IMAGE & SON', NULL),
 ('INFORMATIQUE', 'INFORMATIQUE', NULL),
 ('OBJETSCO', 'OBJET CONNECTE', NULL),
@@ -110,7 +110,7 @@ CREATE TABLE `produit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `produit`
+-- D&eacutechargement des donn&eacutees de la table `produit`
 --
 
 INSERT INTO `produit` (`PRODRef`, `PRODLibelle`, `PRODPrix`, `PRODDesc`, `PRODCatCode`) VALUES
@@ -124,10 +124,10 @@ INSERT INTO `produit` (`PRODRef`, `PRODLibelle`, `PRODPrix`, `PRODDesc`, `PRODCa
 ('IMPRIMANTEHP', 'Imprimante multifonctions HP', '130', '', 'INFORMATIQUE'),
 ('IPADAPPLE4', 'IPAD BLANC Apple', '500', '', 'INFORMATIQUE'),
 ('IPHONEXS64AG', 'iPhone XS 64Go Argent', '1159', '', 'TEL'),
-('IPHONEXS64GR', 'iPhone XS 64Go Gris Sidéral', '1159', '', 'TEL'),
+('IPHONEXS64GR', 'iPhone XS 64Go Gris Sid&eacuteral', '1159', '', 'TEL'),
 ('IPHONEXS64OR', 'iPhone XS 64Go Or', '1159', '', 'TEL'),
 ('IPHONEXSMAX64AG', 'iPhone XS Max 64Go Argent', '1259', '', 'TEL'),
-('IPHONEXSMAX64GR', 'iPhone XS Max 64Go Gris Sidéral', '1259', '', 'TEL'),
+('IPHONEXSMAX64GR', 'iPhone XS Max 64Go Gris Sid&eacuteral', '1259', '', 'TEL'),
 ('IPHONEXSMAX64OR', 'iPhone XS Max 64Go Or', '1259', '', 'TEL'),
 ('JBLFLIPOCCASION', 'JBL FLIP 3 OCCASION', '59.99', '', 'OCCAS'),
 ('JBLXTREME', 'BL Xtreme Bluetooth Noir', '199.99', '', 'IMAGESON'),
@@ -137,12 +137,12 @@ INSERT INTO `produit` (`PRODRef`, `PRODLibelle`, `PRODPrix`, `PRODDesc`, `PRODCa
 ('PS4', 'PLAYSTATION 4', '299.99', '', 'CONS'),
 ('PS4OCCASION', 'PS4 OCCASION', '259.99', '', 'OCCAS'),
 ('SAMSUNGGALAXYBUDSJAUNE', 'Ecouteurs sans fil Samsung Jaune', '149.99', '', 'IMAGESON'),
-('SOMMEILMONTRE', 'Bracelet d\'Activité Goo Sleep Care', '79.99', '', 'OBJETSCO'),
+('SOMMEILMONTRE', 'Bracelet d\'Activit&eacute Goo Sleep Care', '79.99', '', 'OBJETSCO'),
 ('SWITCH', 'Nintendo switch', '329.99', '', 'CONS'),
 ('XBOX', 'PACK XBOX ONE', '499.99', '', 'CONS');
 
 --
--- Index pour les tables déchargées
+-- Index pour les tables d&eacutecharg&eacutees
 --
 
 --
@@ -179,7 +179,7 @@ ALTER TABLE `produit`
   ADD KEY `PRODCatCode` (`PRODCatCode`);
 
 --
--- Contraintes pour les tables déchargées
+-- Contraintes pour les tables d&eacutecharg&eacutees
 --
 
 --
