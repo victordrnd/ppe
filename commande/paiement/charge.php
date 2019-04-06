@@ -1,11 +1,14 @@
 <?php
 session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/api/autoload.php';
+include $_SERVER['DOCUMENT_ROOT'].'/api/composer/vendor/autoload.php';
+
+
+
+
 if(isset($_POST['ville']) && !empty($_SESSION['ProductsInCart'])){
   $panier = new Panier;
   $commande = new Commande;
-
-  //var_dump($panier->getCart(true));
   $comref = md5(uniqid(rand(), true));
   $prixtotal = 0;
 
@@ -16,7 +19,6 @@ if(isset($_POST['ville']) && !empty($_SESSION['ProductsInCart'])){
   if(isset($_SESSION['COUPONCode'])){
     $prixtotal *= (1 - ($_SESSION['COUPONReduction'] / 100));
   }
-  //var_dump($panier->getCart(true));
   //on sauvegarde la commande
   $commande->comref = $comref;
   $commande->comprix = $prixtotal;
@@ -34,12 +36,18 @@ if(isset($_POST['ville']) && !empty($_SESSION['ProductsInCart'])){
     $lignecommande->LCcomref = $comref;
     $lignecommande->save();
   }
+
+  $commande = new Commande;
+  $panierinfo = json_encode($commande->getInfo($comref, true));
+  echo $panierinfo;
+
+
+
   unset($_SESSION['COUPONCode']);
   unset($_SESSION['COUPONReduction']);
   unset($_SESSION['ProductsInCart']);
   unset($_SESSION['NumberCart']);
   header('location:success.php?token='.$comref);
-
-
 }
+
 ?>

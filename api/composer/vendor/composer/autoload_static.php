@@ -35,6 +35,13 @@ class ComposerStaticInit85f85c4ea1a5b26a56f021851f34ddc2
     );
 
     public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'Unirest\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/mashape/unirest-php/src',
+            ),
+        ),
         'P' => 
         array (
             'PHPDocsMD' => 
