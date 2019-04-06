@@ -4,11 +4,7 @@ session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/api/autoload.php';
 $panier = new Commande;
 $panierinfo = $panier->getInfo('d6444e8ad1e79c6ff452c5aeef80fcae',true);
-
-$utilisateur = new Utilisateur;
-$utilisateurinfo = $utilisateur->details("13df9047801911bb8ea92bf142eeedfc");
 ?>
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
