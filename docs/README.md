@@ -1,4 +1,4 @@
-# Documentation générales
+# **Documentation générales**
 ## Organisation du projet
 ### Dossier /includes
 
@@ -26,7 +26,7 @@ Ce dossier contient l'ensemble des images présentes sur StockPro
 - **upload** Ce dossier contient les images que l'API a générée
 - **vendor** Ce dossier est le dossier des bibliothèques packagist
 
-# Documentation de L'API
+# **Documentation de L'API**
 ## Installation
 
 Afin de commencer à utiliser l'API il est nécessaire d'inclure le fichier de chargement automatique des classes.
