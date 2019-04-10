@@ -212,32 +212,52 @@ include  $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
       </div>
     </div>
     <div class="container">
-  <div class="row">
-    <div class="col mt-5">
-      <div class="card border-0 shadow-small">
-        <h2 class="text-center mt-2">Pour toutes commandes passée avant minuit <i class="fas fa-stopwatch"></i></h2>
-        <h3 class="text-center m-2">-25% sur tous les articles avec le code: CHARTREUX25</h3>
+      <div class="row">
+        <div class="col mt-5">
+          <div class="card border-0 shadow-small">
+            <h2 class="text-center mt-2">Pour toutes commandes passée avant minuit <i class="fas fa-stopwatch"></i></h2>
+            <h3 class="text-center m-2">-25% sur tous les articles avec le code: CHARTREUX25</h3>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-  </body>
-  <script src="vendor/rellax.min.js"></script>
-  <script>
-  var rellax = new Rellax('.rellax', {
-    speed:-5,
-    vertical:true,
-    horizontal: false
-  });
+    <?php
+    if(!isset($_COOKIE['rgpd'])):?>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="position:fixed; bottom:10px;left:50%; transform:translateX(-50%)">
+      <strong>RGPD</strong> Acceptez vous l'utilisation des cookies ? <strong id="cookie">Oui</strong>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <?php endif?>
 
-  window.setInterval(stopparralax,150);
-  function stopparralax(){
-    var rect = document.getElementById('parralaximage').getBoundingClientRect();
-    console.log(rect.top);
-    if(rect.top <= 240){
-      rellax.destroy();
-    }
+
+
+
+
+
+</body>
+<script src="vendor/rellax.min.js"></script>
+<script>
+
+$('#cookie').click(function(){
+  document.cookie= 'rgpd=true';
+  $('.alert').hide();
+})
+var rellax = new Rellax('.rellax', {
+  speed:-5,
+  vertical:true,
+  horizontal: false
+});
+
+window.setInterval(stopparralax,150);
+function stopparralax(){
+  var rect = document.getElementById('parralaximage').getBoundingClientRect();
+  console.log(rect.top);
+  if(rect.top <= 240){
+    rellax.destroy();
   }
+}
 </script>
 <script type="text/javascript">
 $('.categorie').click(function(){
@@ -258,7 +278,9 @@ function offHover(id)
 }
 </script>
 <style media="screen">
-
+#cookie{
+  cursor:pointer;
+}
 .mac {
   position: absolute;
   right: 0%;
