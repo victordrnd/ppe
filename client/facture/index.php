@@ -8,6 +8,9 @@ $panierinfo = $panier->getInfo($_GET['commandeid'],true);
 ?>
 <div class="container mb-5 mt-4">
   <h1 class="text-center">Facture StockPro</h1>
+  <div class="container">
+    <a href="../commande?id=<?=$_GET['commandeid']?>" class="text-dark"><i data-feather="chevron-left"></i></a>
+  </div>
   <div class="card mt-5">
     <div class="card-header">
       Facture
