@@ -203,9 +203,9 @@ $listpanier = $panier->getAll();
       "PRODCatCode": "TEL",
       "Categorie":
       {
-        "CATCode": "TEL"
-        "CATLibelle": "TELEPHONIE"
-        "CATDesc": NULL  
+        "CATCode": "TEL",
+        "CATLibelle": "TELEPHONIE",
+        "CATDesc": NULL  ,
       }
     }
   }
