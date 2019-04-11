@@ -1,10 +1,12 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 if(isset($_POST['submit'])){
+  session_start();
+  include $_SERVER['DOCUMENT_ROOT'].'/api/autoload.php';
   $user = new Utilisateur;
   $response = $user->inscription($_POST['mail'], $_POST['password1'],$_POST['password2'], $_POST['nom'], $_POST['prenom']);
   $display = 'd-block';
 }else{
+  include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   $response = null;
   $display = 'd-none';
 }

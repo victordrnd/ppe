@@ -1,5 +1,4 @@
 <?php
-session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 include $_SERVER['DOCUMENT_ROOT'].'/api/autoload.php';
 $panier = new Commande;
