@@ -20,14 +20,6 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
 
 
 
-  <div class="bs-component mt-4 mr-4" style="position:fixed; bottom:20px;opacity:0.8;right:20px; z-index:4">
-    <div class="alert alert-dismissible alert-secondary">
-      <button type="button" class="close" data-dismiss="alert">×</button>
-      <strong>StockPro!</strong> -25% sur tous les articles avant minuit avec le code: <strong>CHARTREUX25</strong>
-    </div>
-  </div>
-
-
 <div class="">
   <h2  class="nav-link active d-md-block text-center display-4">TELEPHONIE</h2>
   <div class="container-fluid ">
@@ -286,15 +278,15 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
   </div>
 </div>
 
-<div class="alert atertproduit alert-warning alert-dismissible fade show w-50 fixed-top" role="alert" style="left:25%; top:3%">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+<div class="alert alertproduit alert-secondary alert-dismissible fade show w-50 fixed-top" role="alert" style="left:25%; top:3%">
+  <strong>Félicitation !</strong> Cet article vient d'être ajouté à votre panier
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 
 <script>
-$('.alert').hide();
+$('.alertproduit').hide();
 $('.addtocart').click(function(){
   $.ajax({
     type: 'GET',
@@ -305,8 +297,10 @@ $('.addtocart').click(function(){
   });
   var numberinCart = $('#numberInCart').html();
   $('#numberInCart').html(parseInt($('#numberInCart').html()) + 1);
-  $('.alert').show();
-
+  $('.alertproduit').show();
+  setTimeout(function() {
+    $('.alertproduit').fadeOut();
+  }, 3000);
 
 
 })
