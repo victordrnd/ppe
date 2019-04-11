@@ -38,7 +38,6 @@ class Database{
 
 
 
-
   /**
   * @var string $dbPassword
   */

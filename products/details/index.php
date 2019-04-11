@@ -5,11 +5,11 @@ $produitinfo = $produit->getProduitById($_GET['ProduitId']);
 //var_dump($produitinfo);
 ?>
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb bg-white">
+  <ul class="breadcrumb bg-white">
     <li class="breadcrumb-item"><a class="text-warning" href="../../">Accueil</a></li>
     <li class="breadcrumb-item"><a class="text-warning" href="../categorie/?categorie=<?=$produitinfo[0]['Categorie']['CATCode']?>"><?=$produitinfo[0]['Categorie']['CATLibelle']?></a></li>
     <li class="breadcrumb-item active" aria-current="page"><?=$produitinfo[0]['PRODLibelle']?></li>
-  </ol>
+  </ul>
 </nav>
 
 <div class="row">
@@ -84,7 +84,7 @@ $produitinfo = $produit->getProduitById($_GET['ProduitId']);
   $('.addtocart').click(function(){
     $.ajax({
       type: 'GET',
-      url: '../process/addtocart.php',
+      url: '../../process/addtocart.php',
       data: {
         'productId': this.id,
       }

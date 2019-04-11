@@ -18,19 +18,8 @@ $infoconsole = $produit->getProduitByCat('CONS', 8);
 $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
 ?>
 
-<div class="row">
-  <div class="col-md-8 col-12">
 
-  </div>
-  <div class="col-md-4 col-12">
-    <div class="bs-component mt-4 mr-4">
-          <div class="alert alert-dismissible alert-secondary">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <strong>StockPro!</strong> -25% sur tous les articles avant minuit avec le code: <strong>CHARTREUX25</strong>
-          </div>
-        </div>
-  </div>
-</div>
+
 <div class="">
   <h2  class="nav-link active d-md-block text-center display-4">TELEPHONIE</h2>
   <div class="container-fluid ">
@@ -57,7 +46,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$telephone["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning px-1 addtocart" id="<?=$telephone['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning px-1 addtocart" id="<?=$telephone['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto "><strong><?=$telephone["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -100,7 +89,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$imageson["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$imageson['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning addtocart" id="<?=$imageson['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto px-0"><strong><?=$imageson["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -142,7 +131,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$informatique["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$informatique['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning addtocart" id="<?=$informatique['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto px-0"><strong><?=$informatique["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -158,8 +147,8 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
 </div>
 
 
-  <div class="col my-4">
-    <a href="categorie/?categorie=INFORMATIQUE" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus de produits</a>
+<div class="col my-4">
+  <a href="categorie/?categorie=INFORMATIQUE" class="btn btn-warning  mr-5 w-25 d-block mx-auto">Voir plus de produits</a>
 
 </div>
 
@@ -184,7 +173,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$console["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$console['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning addtocart" id="<?=$console['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto px-0"><strong><?=$console["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -228,7 +217,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$objet["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$objet['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning addtocart" id="<?=$objet['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto px-0"><strong><?=$objet["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -269,7 +258,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$occasion["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$occasion['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning addtocart" id="<?=$occasion['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto px-0"><strong><?=$occasion["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -289,9 +278,15 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
   </div>
 </div>
 
-<div class="row border-bottom border-warning w-50 d-block mx-auto"></div>
+<div class="alert alertproduit alert-secondary alert-dismissible fade show w-50 fixed-top" role="alert" style="left:25%; top:3%">
+  <strong>Félicitation !</strong> Cet article vient d'être ajouté à votre panier
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 
 <script>
+$('.alertproduit').hide();
 $('.addtocart').click(function(){
   $.ajax({
     type: 'GET',
@@ -302,6 +297,12 @@ $('.addtocart').click(function(){
   });
   var numberinCart = $('#numberInCart').html();
   $('#numberInCart').html(parseInt($('#numberInCart').html()) + 1);
+  $('.alertproduit').show();
+  setTimeout(function() {
+    $('.alertproduit').fadeOut();
+  }, 3000);
+
+
 })
 
 $('.card').children('.card-img-top').click(function(){
@@ -315,6 +316,6 @@ include $_SERVER['DOCUMENT_ROOT'].'/includes/footer/footer.php';
 <style>
 
 .card-img-top{
-    cursor:pointer;
-  }
+  cursor:pointer;
+}
 </style>

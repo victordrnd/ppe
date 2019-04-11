@@ -205,7 +205,11 @@ $listpanier = $panier->getAll();
       {
         "CATCode": "TEL",
         "CATLibelle": "TELEPHONIE",
+<<<<<<< HEAD
         "CATDesc": NULL  ,
+=======
+        "CATDesc": NULL,
+>>>>>>> a056f88defd808de4e4263ac24f69edfc7422c24
       }
     }
   }

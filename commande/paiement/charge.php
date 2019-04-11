@@ -44,7 +44,7 @@ if(isset($_POST['ville']) && !empty($_SESSION['ProductsInCart'])){
   unset($_SESSION['COUPONReduction']);
   unset($_SESSION['ProductsInCart']);
   unset($_SESSION['NumberCart']);
-  //header('location:success.php?token='.$comref);
+  header('location:success.php?token='.$comref);
 }
 
 ?>
