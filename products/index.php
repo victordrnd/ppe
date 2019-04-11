@@ -54,7 +54,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$telephone["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning px-1 addtocart" id="<?=$telephone['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning px-1 addtocart" id="<?=$telephone['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto "><strong><?=$telephone["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$imageson["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$imageson['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning addtocart" id="<?=$imageson['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto px-0"><strong><?=$imageson["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -139,7 +139,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$informatique["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$informatique['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning addtocart" id="<?=$informatique['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto px-0"><strong><?=$informatique["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -181,7 +181,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$console["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$console['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning addtocart" id="<?=$console['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto px-0"><strong><?=$console["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -225,7 +225,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$objet["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$objet['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning addtocart" id="<?=$objet['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto px-0"><strong><?=$objet["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -266,7 +266,7 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
               <p class="text-muted small text-truncate"><?=$occasion["PRODDesc"] ?></p>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-8"><a href="#" class="btn btn-warning addtocart" id="<?=$occasion['PRODRef']?>">Ajoutez au panier</a></div>
+                  <div class="col-8"><a class="btn btn-warning addtocart" id="<?=$occasion['PRODRef']?>">Ajoutez au panier</a></div>
                   <div class="col-4 mt-auto mb-auto px-0"><strong><?=$occasion["PRODPrix"]?> &euro;</strong></div>
                 </div>
               </div>
@@ -286,9 +286,15 @@ $infoobjet = $produit->getProduitByCat('OBJETSCO', 8);
   </div>
 </div>
 
-<div class="row border-bottom border-warning w-50 d-block mx-auto"></div>
+<div class="alert atertproduit alert-warning alert-dismissible fade show w-50 fixed-top" role="alert" style="left:25%; top:3%">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 
 <script>
+$('.alert').hide();
 $('.addtocart').click(function(){
   $.ajax({
     type: 'GET',
@@ -299,6 +305,10 @@ $('.addtocart').click(function(){
   });
   var numberinCart = $('#numberInCart').html();
   $('#numberInCart').html(parseInt($('#numberInCart').html()) + 1);
+  $('.alert').show();
+
+
+
 })
 
 $('.card').children('.card-img-top').click(function(){

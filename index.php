@@ -250,14 +250,14 @@ var rellax = new Rellax('.rellax', {
   horizontal: false
 });
 
-window.setInterval(stopparralax,150);
-function stopparralax(){
+$(window).on('scroll', function(e){
   var rect = document.getElementById('parralaximage').getBoundingClientRect();
   console.log(rect.top);
   if(rect.top <= 240){
     rellax.destroy();
   }
-}
+});
+
 </script>
 <script type="text/javascript">
 $('.categorie').click(function(){
