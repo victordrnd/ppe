@@ -22,9 +22,11 @@ $commandelist = $commande->getByUser($_SESSION['id'], 6);
                   <th scope="col-4">Date</th>
                   <th scope="col-4">Prix</th>
                   <th scope="col-4">Statut</th>
+
                 </tr>
               </thead>
               <tbody>
+                <!-- <i class="fas fa-file-invoice"></i> -->
                 <?php
                 $number = 0;
                 foreach($commandelist as $commande){
@@ -35,6 +37,8 @@ $commandelist = $commande->getByUser($_SESSION['id'], 6);
                     <td><?=$commande['COMDate']?></td>
                     <td><?=$commande['COMPrix']?> €</td>
                     <td><?=$commande['COMStatus']?></td>
+                    <td><i class="fas fa-file-invoice"></i></td>
+
                   </tr>
                   <?php
                 }

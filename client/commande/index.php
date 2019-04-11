@@ -13,6 +13,8 @@ $url='https://api.mapbox.com/geocoding/v5/mapbox.places/Tassin.json?access_token
   <h2 class="text-center mt-5 ">Commande n°<?=substr($commandeinfo[0]['COMRef'], 0, 8)?></h2>
   <div class="container">
     <a href="../" class="text-dark"><i data-feather="chevron-left"></i></a>
+
+
   </div>
   <div class="row m-md-5">
     <div class="col-12 col-md-8">
@@ -70,9 +72,8 @@ $url='https://api.mapbox.com/geocoding/v5/mapbox.places/Tassin.json?access_token
             <h6>Adresse : <span class="float-right"><?=$commandeinfo[0]['COMAdresse']?></span></h6>
             <h6>Date estimée : <span class="float-right"><?=date('Y-m-d', strtotime($commandeinfo[0]['COMDate']. ' + 3 days'));?></span></h6>
           </ul>
+        <a href="../facture/?commandeid=<?=$_GET['id']?>">  <button   type="button" class="btn btn-secondary w-100 mt-5">Facture <i class="fas fa-file-invoice"></i></button></a>
         </div>
-
-
       </div>
     </div>
 
@@ -164,7 +165,7 @@ $url='https://api.mapbox.com/geocoding/v5/mapbox.places/Tassin.json?access_token
             'fill-extrusion-opacity': .6
           }
         }, labelLayerId);
-        
+
       });
     });
 
