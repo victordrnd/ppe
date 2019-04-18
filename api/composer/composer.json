@@ -1,6 +1,7 @@
 {
     "require": {
         "victorjonsson/markdowndocs": "^1.3",
-        "mashape/unirest-php": "^3.0"
+        "mashape/unirest-php": "^3.0",
+        "sendgrid/sendgrid": "^7.3"
     }
 }

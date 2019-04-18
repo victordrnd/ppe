@@ -1,6 +1,7 @@
 <?php
 session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/api/autoload.php';
+include $_SERVER['DOCUMENT_ROOT'].'/api/composer/vendor/autoload.php';
 
 if(isset($_POST['ville']) && !empty($_SESSION['ProductsInCart'])){
   $panier = new Panier;
@@ -35,15 +36,33 @@ if(isset($_POST['ville']) && !empty($_SESSION['ProductsInCart'])){
 
   $commande = new Commande;
   $panierinfo = json_encode($commande->getInfo($comref, true));
+  $_SESSION['panierinfo_to_send'] = $panierinfo;
   //echo $panierinfo;
-  $url = 'http://178.128.166.86/ppe/';
+  /*$url = 'http://178.128.166.86/ppe/';
   file_get_contents($url.'?panierinfo='.urlencode($panierinfo).'&nom='.$_SESSION['nom'].'&prenom='.$_SESSION['prenom'].'&mail='.$_SESSION['mail']);
+  */
 
+  $email = new \SendGrid\Mail\Mail();
+  $email->setFrom("stockpro@victordurand.fr", "StockPro");
+  $email->setSubject("Votre commande a été pris en compte.");
+  $email->addTo($_SESSION['mail'], $_SESSION['prenom'].' '.$_SESSION['nom']);
+  $email->addContent("text/plain", "Stockpro votre commande a été passée avec succès.");
+  $email->addContent("text/html", file_get_contents($_SERVER['DOCUMENT_ROOT'].'/email/order.php'));
+  $sendgrid = new \SendGrid('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');
+  try {
+    $response = $sendgrid->send($email);
+    print $response->statusCode() . "\n";
+    print_r($response->headers());
+    print $response->body() . "\n";
+  } catch (Exception $e) {
+    echo 'Caught exception: '. $e->getMessage() ."\n";
+  }
 
   unset($_SESSION['COUPONCode']);
   unset($_SESSION['COUPONReduction']);
   unset($_SESSION['ProductsInCart']);
   unset($_SESSION['NumberCart']);
+  unset($_SESSION['panierinfo_to_send']);
   header('location:success.php?token='.$comref);
 }
 
