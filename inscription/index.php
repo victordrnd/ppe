@@ -6,11 +6,11 @@ if(isset($_POST['submit'])){
   $response = $user->inscription($_POST['mail'], $_POST['password1'],$_POST['password2'], $_POST['nom'], $_POST['prenom']);
   $display = 'd-block';
 }else{
-  include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
+
   $response = null;
   $display = 'd-none';
 }
-
+include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <body>
   <div class="alert alert-danger container <?= $display?>" role="alert">

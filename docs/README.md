@@ -26,6 +26,24 @@ Ce dossier contient l'ensemble des images présentes sur StockPro
 - **upload** Ce dossier contient les images que l'API a générée
 - **vendor** Ce dossier est le dossier des bibliothèques packagist
 
+# **Cahier de test**
+
+| Test effectué                                                               | Résultat attendu du test                                                  |  Résultat obtenu  |
+|-----------------------------------------------------------------------------|---------------------------------------------------------------------------|:-----------------:|
+| Inscription avec des mots de passes différents                              | message : Les mots de passe saisis ne correspondent pas                   | Ok (problème CSS) |
+| Inscription avec une adresse mail déjà prise                                | message : Ce compte existe déjà, merci d'utiliser une autre adresse mail. | Ok (problème CSS) |
+| Connexion avec un mauvais mot de passe                                      | message : Le mot de passe saisis est incorrect                            |         Ok        |
+| Connexion avec une adresse email qui n'est pas enregistrée                  | message : Cet utilisateur n'existe pas                                    |         Ok        |
+| Connexion avec une adresse email existante et le mot de passe correspondant | redirection : espace client                                               |         Ok        |
+| Ajout d'un article au panier                                                | message : Félicitation ! Cet article vient d'être ajouté à votre panier   |         Ok        |
+| Suppression des articles du panier                                          | message : Votre panier est vide.                                          |         Ok        |
+| Ajout de plusieurs articles au panier                                       | Affichage des articles                                                    |         Ok        |
+| Augmentation de la quantité d'un produit du panier                          | Augmentation du prix total                                                |         Ok        |
+| Utilisation d'un code promo qui n'existe pas                                | message : Le coupon n'existe pas.                                         |         Ok        |
+| Utilisation d'un code promo correct                                         | Baisse du prix correspondante                                             |         Ok        |
+| Accès à l'espace client sans compte (/client/)                              | Erreur 403 : Interdit                                                     |         Ok        |
+| Accès au processus de commande (/commande/) avec un panier vide             | Erreur 403 : Interdit                                                     |         Ok        |
+
 # **Documentation de L'API**
 ## Installation
 

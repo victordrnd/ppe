@@ -52,10 +52,11 @@ if(isset($_POST['coupon'])){
               </li>
               <?php
             }
-            $prixht = $prixtotal *0.8;
+
             if(isset($coupon['COUPONCode'])){
               $prixtotal *= (1 - ($coupon['COUPONReduction'] / 100));
             }
+            $prixht = $prixtotal *0.8;
             $tva = $prixtotal - $prixht;
           }
           else{
@@ -128,7 +129,6 @@ $('.number').change(function(){
   var prixProd= $('.prix-'+prodid).html();
   var prixTotal = $('#prixTotal').html();
   prixTotal = parseInt(prixTotal.substring(0, prixTotal.length-1));
-  console.log(prixTotal);
   if(this.value > initvalue){
     //add to cart
     var number = this.value - initvalue;
