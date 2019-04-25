@@ -26,7 +26,7 @@ Ce dossier contient l'ensemble des images présentes sur StockPro
 - **upload** Ce dossier contient les images que l'API a générée
 - **vendor** Ce dossier est le dossier des bibliothèques packagist
 
-# **Cahier de test**
+# **Cahier de tests**
 
 | Test effectué                                                               | Résultat attendu du test                                                  |  Résultat obtenu  |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------|:-----------------:|
